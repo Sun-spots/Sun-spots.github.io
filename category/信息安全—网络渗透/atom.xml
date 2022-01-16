@@ -1,18 +1,14 @@
 <?xml version="1.0"?>
-<rss version="2.0">
-    <channel>
-        <title>Hexo • Posts by &#34;信息安全—网络渗透&#34; category</title>
-        <link>https://sun-spots.github.io</link>
-        <description></description>
-        <language>zh-CN</language>
-        <pubDate>Sat, 15 Jan 2022 20:05:00 +0800</pubDate>
-        <lastBuildDate>Sat, 15 Jan 2022 20:05:00 +0800</lastBuildDate>
-        <item>
-            <guid isPermalink="true">https://sun-spots.github.io/2022/01/15/MySQL%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%8Asql%E6%B3%A8%E5%85%A5/</guid>
-            <title>MySQL基本语法及sql注入</title>
-            <link>https://sun-spots.github.io/2022/01/15/MySQL%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%8Asql%E6%B3%A8%E5%85%A5/</link>
-            <pubDate>Sat, 15 Jan 2022 20:05:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;mysql基本语法及sql注入&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mysql基本语法及sql注入&#34;&gt;#&lt;/a&gt; MySQL 基本语法及 sql 注入&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://sun-spots.github.io</id>
+    <title>Hexo • Posts by &#34;信息安全—网络渗透&#34; category</title>
+    <link href="https://sun-spots.github.io" />
+    <updated>2022-01-15T12:05:00.000Z</updated>
+    <entry>
+        <id>https://sun-spots.github.io/2022/01/15/MySQL%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%8Asql%E6%B3%A8%E5%85%A5/</id>
+        <title>MySQL基本语法及sql注入</title>
+        <link rel="alternate" href="https://sun-spots.github.io/2022/01/15/MySQL%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%8Asql%E6%B3%A8%E5%85%A5/"/>
+        <content type="html">&lt;h1 id=&#34;mysql基本语法及sql注入&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mysql基本语法及sql注入&#34;&gt;#&lt;/a&gt; MySQL 基本语法及 sql 注入&lt;/h1&gt;
 &lt;h2 id=&#34;课堂导学&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#课堂导学&#34;&gt;#&lt;/a&gt; 课堂导学：&lt;/h2&gt;
 &lt;p&gt;Sql 语句的学习主要为渗透中 Sql 注入漏洞打下坚实基础，这样在学 Sql 注入漏洞时才能一马平川。&lt;/p&gt;
 &lt;h2 id=&#34;知识框架&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#知识框架&#34;&gt;#&lt;/a&gt; 知识框架：&lt;/h2&gt;
@@ -865,14 +861,14 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueXVxdWUuY29tL2F0dGFjaG1lbnRzL3l1cXVlLzAvMjAyMS9zcWwvMjY5OTc1MC8xNjI3MzU2MzYzMDc1LTgyNTJkNDAwLTlkNjYtNDM1Ny05MjEwLTllYTFjNWNiNmVkMC5zcWw=&#34;&gt;📎SQL 语句详细笔记.sql&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueXVxdWUuY29tL2F0dGFjaG1lbnRzL3l1cXVlLzAvMjAyMS9tZC8yNjk5NzUwLzE2MjczNTYzNjMwNjEtYjNkZjRjN2ItMzEwMi00NjhjLThkYWEtZDkxNmJhYjZjZDVjLm1k&#34;&gt;📎mysql 数据库笔记.md&lt;/span&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://sun-spots.github.io/2022/01/13/web%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA/</guid>
-            <title>web站点搭建</title>
-            <link>https://sun-spots.github.io/2022/01/13/web%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA/</link>
-            <pubDate>Thu, 13 Jan 2022 23:05:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;web站点搭建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#web站点搭建&#34;&gt;#&lt;/a&gt; web 站点搭建&lt;/h1&gt;
+</content>
+        <updated>2022-01-15T12:05:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://sun-spots.github.io/2022/01/13/web%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA/</id>
+        <title>web站点搭建</title>
+        <link rel="alternate" href="https://sun-spots.github.io/2022/01/13/web%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA/"/>
+        <content type="html">&lt;h1 id=&#34;web站点搭建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#web站点搭建&#34;&gt;#&lt;/a&gt; web 站点搭建&lt;/h1&gt;
 &lt;h3 id=&#34;一基础知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一基础知识&#34;&gt;#&lt;/a&gt; 一：基础知识&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;1. 网站&lt;/strong&gt;：指在因特网上根据一定的规则，使用 HTML、CSS、jsp 等脚本语言与工具制作的用于展示特定内容相关网页的集合。简单地说，网站是一种沟通工具，人们可以通过网站来发布自己想要公开的资讯，或者利用网站来提供相关的网络服务。人们可以通过网页浏览器来访问网站，获取自己需要的资讯或者享受网络服务。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;网站的分类&lt;/strong&gt;：&lt;/p&gt;
@@ -996,7 +992,7 @@ Linux + Tomcat、Jboss、WebLogic + MySQL/Oracle + Jsp&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Criyun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220114230341805.png&#34; alt=&#34;image-20220114230341805&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
- ]]></description>
-        </item>
-    </channel>
-</rss>
+</content>
+        <updated>2022-01-13T15:05:00.000Z</updated>
+    </entry>
+</feed>
