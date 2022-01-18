@@ -1,0 +1,1076 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Hexo" href="https://sun-spots.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Hexo" href="https://sun-spots.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Hexo" href="https://sun-spots.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://sun-spots.github.io/2022/01/15/%E7%9B%92%E6%A8%A1%E5%9E%8B/">
+
+
+
+  <title>
+盒模型 - web前端 |
+Yume Shoka = Hexo</title>
+<meta name="generator" content="Hexo 6.0.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">盒模型
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-01-15 19:59:12">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-01-15T19:59:12+08:00">2022-01-15</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicm0n457cj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclwrdwyaj20zk0m8are.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/web/" itemprop="item" rel="index" title="分类于 web前端"><span itemprop="name">web前端</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://sun-spots.github.io/2022/01/15/%E7%9B%92%E6%A8%A1%E5%9E%8B/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="John Doe">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="盒模型"><a class="markdownIt-Anchor" href="#盒模型">#</a> 盒模型</h1>
+<p>笔记来源：<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVhKNDExWDdVZA==">尚硅谷 Web 前端 HTML5&amp;CSS3 初学者零基础入门全套完整版</span></p>
+<h1 id="盒模型-2"><a class="markdownIt-Anchor" href="#盒模型-2">#</a> 盒模型</h1>
+<h2 id="1-文档流normalflow"><a class="markdownIt-Anchor" href="#1-文档流normalflow">#</a> 1. 文档流（normalflow）</h2>
+<p>网页是一个多层的结构，一层摁着一层</p>
+<p>通过 CSS 可以分别为每一层来设置样式，作为用户来讲只能看到最顶上一层这些层中，最底下的一层称为文档流，文档流是网页的基础我们所创建的元素默认都是在文档流中进行排列。</p>
+<p>对于我们来元素主要有两个状态</p>
+<ul>
+<li>
+<p>在文档流中</p>
+</li>
+<li>
+<p>不在文档流中（脱离文档流，元素处于漂浮状态）</p>
+</li>
+</ul>
+<p>那么元素在文档流中有什么特点，我们接着往下看</p>
+<p><strong>块级元素独自占一行且宽度会占满父元素宽度，行内元素不会独占一行，相邻行内元素可以排在同一行。</strong></p>
+<h2 id="2-块元素"><a class="markdownIt-Anchor" href="#2-块元素">#</a> 2. 块元素</h2>
+<p>CSS 中常见的块级元素：</p>
+<p><img data-src="https://img1.imgtp.com/2022/01/18/d2uDuqWy.png" alt="9922720e0cf3d7caccc574e2fe1fbe096b63a977.png"></p>
+<ul>
+<li>
+<p>块元素会在页面中独占一行，其后的元素也只能另起一行，并不能两个元素共用一行。</p>
+</li>
+<li>
+<p>元素的高度、宽度、行高和顶底边距都是可以设置的，默认宽度是父元素的全部（会把父元素撑满）</p>
+</li>
+<li>
+<p>默认高度是被内容撑开（子元素）</p>
+</li>
+</ul>
+<h2 id="3-行内元素"><a class="markdownIt-Anchor" href="#3-行内元素">#</a> 3. 行内元素</h2>
+<p><strong>CSS 中常见的行内元素：</strong></p>
+<p><strong>伪元素默认为行内元素！！！！！！！！</strong></p>
+<p><img data-src="https://img1.imgtp.com/2022/01/18/e9930SbM.png" alt=""></p>
+<ul>
+<li>
+<p>行内元素不会独占页面的一行，只占自身的大小</p>
+</li>
+<li>
+<p>行内元素在页面中左向右水平排列（书写习惯一致）</p>
+</li>
+<li>
+<p>如果一行之中不能容纳下所有的行内元素，则元素会换到第二行继续自左向右排列</p>
+</li>
+<li>
+<p>行内元素的默认宽度和高度都是被内容撑开</p>
+</li>
+</ul>
+<h2 id="4-盒子模型"><a class="markdownIt-Anchor" href="#4-盒子模型">#</a> 4. 盒子模型</h2>
+<p>网页设计中常听的属性名：内容 (content)、内边距 (padding)、边框 (border)、外边距 (margin)， CSS 盒子模型都具备这些属性。</p>
+<p>这些属性我们可以用日常生活中的常见事物 —— 盒子作一个比喻来理解，所以叫它盒子模型。</p>
+<p>CSS 盒子模型就是在网页设计中经常用到的 CSS 技术所使用的一种思维模型。</p>
+<h3 id="盒模型-盒子模型-框模型box-model"><a class="markdownIt-Anchor" href="#盒模型-盒子模型-框模型box-model">#</a> 盒模型、盒子模型、框模型（box model）</h3>
+<p>CSS 将页面中的所有元素都设置为了一个矩形的盒子</p>
+<p>将元素设置为矩形的盒子后，对页面的布局就变成将不同的盒子摆放到不同的位置</p>
+<p>每一个盒子都由一下几个部分组成：</p>
+<ul>
+<li>
+<p>内容区（content）</p>
+</li>
+<li>
+<p>内边距（padding）</p>
+</li>
+<li>
+<p>边框（border）</p>
+</li>
+<li>
+<p>外边距（margin）</p>
+</li>
+</ul>
+<p><img data-src="https://s3.bmp.ovh/imgs/2022/01/48f35f6a6bd57b18.png" alt=""></p>
+<h3 id="内容区content"><a class="markdownIt-Anchor" href="#内容区content">#</a> 内容区（content）</h3>
+<p>内容区是盒子模型的中心，它呈现了盒子的主要信息内容，这些内容可以是文本、图片等多种类型，用来放页面的内容</p>
+<p><strong>元素中的所有的子元素和文本内容都在内容区中</strong></p>
+<ul>
+<li>
+<p><code>width和height</code>  设置排列内容区的大小</p>
+</li>
+<li>
+<p><code>width</code>  设置内容区的宽度</p>
+</li>
+<li>
+<p><code>height</code>  设置内容区的高度</p>
+</li>
+</ul>
+<p><strong>示例</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>; </span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="边框border"><a class="markdownIt-Anchor" href="#边框border">#</a> 边框（border）</h3>
+<p>边框属于盒子边缘，边框里边属于盒子内部，出了边框都是盒子的外部</p>
+<p><img data-src="https://s3.bmp.ovh/imgs/2022/01/9cedfdfe8ef11b50.gif" alt=""></p>
+<p><strong>注意：边框的大小会影响到整个盒子的大小</strong></p>
+<ul>
+<li>
+<p><code>border-width</code>  边框的宽度：默认 3px</p>
+</li>
+<li>
+<ul>
+<li><code>border-top-width</code>  上边框的宽度</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><code>border-right-width</code>  右边框的宽度</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><code>border-bottom-width</code>  下边框的宽度</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><code>border-left-width</code>  左边框的宽度</li>
+</ul>
+</li>
+<li>
+<p><code>border-color</code>  边框的颜色：默认使用 color 的颜色值</p>
+</li>
+<li>
+<p><code>border-top-color</code>  上边框的颜色</p>
+</li>
+<li>
+<p><code>border-right-color</code>  右边框的颜色</p>
+</li>
+<li>
+<p><code>border-bottom-color</code>  下边框的颜色</p>
+</li>
+<li>
+<p><code>border-left-color</code>  左边框的颜色</p>
+</li>
+<li>
+<p><strong> <code>border-style</code>  边框的样式：没有默认值，必须指定</strong></p>
+</li>
+<li>
+<ul>
+<li><code>border-top-style</code>  上边框的样式</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><code>border-right-style</code>  右边框的样式</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><code>border-bottom-style</code>  下边框的样式</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><code>border-left-style</code>  左边框的样式</li>
+</ul>
+</li>
+</ul>
+<p><strong>示例</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: red;</span><br><span class="line">    <span class="comment">/* </span></span><br><span class="line"><span class="comment">    	solid  实线 </span></span><br><span class="line"><span class="comment">    	dotted 点状虚线 </span></span><br><span class="line"><span class="comment">    	dashed 虚线 </span></span><br><span class="line"><span class="comment">    	double 双线 </span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="attribute">border-style</span>: solid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>不论是 <code>border-width</code>  、  <code>border-color</code>  、 <code>border-style</code>  还是其衍生出来的属性写法，都可以指定每个方向的边框情况</p>
+<p>设定几个值就决定了对应方向的宽度、颜色或样式</p>
+<ul>
+<li>
+<p>四个值： <code>上 右 下 左</code></p>
+</li>
+<li>
+<p>三个值： <code>上 左右 下</code></p>
+</li>
+<li>
+<p>两个值： <code>上下 左右</code></p>
+</li>
+<li>
+<p>一个值： <code>上下左右</code></p>
+</li>
+</ul>
+<p>其实不管设置几个值，只要记住：其顺序是按<strong>顺时针方向设置</strong>的，剩下的可以由矩形的对称性推导出来</p>
+<p><code>border</code> ：简写属性，通过该属性可以同时设置边框所有的相关样式，并且没有顺序要求</p>
+<ul>
+<li>
+<p><code>border-top</code>  上边框的宽度、颜色和样式</p>
+</li>
+<li>
+<p><code>border-right</code>  右边框的宽度、颜色和样式</p>
+</li>
+<li>
+<p><code>border-bottom</code>  下边框的宽度、颜色和样式</p>
+</li>
+<li>
+<p><code>border-left</code>  左边框的宽度、颜色和样式</p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123; </span><br><span class="line">	<span class="attribute">border</span>: <span class="number">10px</span> red solid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="内边距padding"><a class="markdownIt-Anchor" href="#内边距padding">#</a> 内边距 (padding）</h3>
+<p>内边距，也叫填充，是内容区和边框之间的空间</p>
+<ul>
+<li>
+<p><code>padding-top</code>  上内边距</p>
+</li>
+<li>
+<p><code>padding-right</code>  右内边距</p>
+</li>
+<li>
+<p><code>padding-bottom</code>  下内边距</p>
+</li>
+<li>
+<p><code>padding-left</code>  左内边距</p>
+</li>
+</ul>
+<p>padding 内边距的简写属性，可以同时指定四个方向的内边距，规则和边框中属性值设置一样</p>
+<p><strong>示例</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">    <span class="selector-class">.outer</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">10px</span> orange solid;</span></span><br><span class="line"><span class="css">        <span class="attribute">padding-right</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">padding-bottom</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">padding-left</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">    &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">    <span class="selector-class">.inner</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: greenyellow;</span></span><br><span class="line"><span class="css">    &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;outer&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;inner&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong></p>
+<p><img data-src="https://s3.bmp.ovh/imgs/2022/01/3bfe25ad984ae842.png" alt=""></p>
+<p>可以看出，当内外 div 宽度和高度一样时，由于 outer 设置了一个 padding 属性，其盒子大小被 “撑大了”</p>
+<p><strong>盒子可见框的大小，由内容区、内边距和边框共同决定，所以在计算盒子大小时，需要将这三个区域加到一起计算</strong></p>
+<h3 id="外边距margin"><a class="markdownIt-Anchor" href="#外边距margin">#</a> 外边距（margin）</h3>
+<p>外边距，也叫空白边，位于盒子的最外围，是添加在边框外周围的空间。空白边使盒子之间不会紧凑地连接在一起，是 CSS 布局的一个重要手段</p>
+<p>注意：外边距不会影响盒子可见框的大小，但是外边距会影响盒子的<strong>位置和占用空间</strong></p>
+<p>一共有四个方向的外边距：</p>
+<ul>
+<li>
+<p><code>margin-top</code>  上外边距</p>
+</li>
+<li>
+<ul>
+<li>设置正值，元素自身向下移动</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>设置负值，元素自身向上移动</li>
+</ul>
+</li>
+<li>
+<p><code>margin-right</code>  右外边距</p>
+</li>
+<li>
+<ul>
+<li>设置正值，其右边的元素向右移动</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>设置负值，其右边的元素向左移动</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>上述说法并不准确，对于块元素，设置 <code>margin-right</code>  不会产生任何效果</li>
+</ul>
+</li>
+<li>
+<p><code>margin-bottom</code>  下外边距</p>
+</li>
+<li>
+<ul>
+<li>设置正值，其下边的元素向下移动</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>设置负值，其下边的元素向上移动</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>上述说法并不准确，对于块元素，会有垂直方向上的边距重叠问题（后面会细说）</li>
+</ul>
+</li>
+<li>
+<p><code>margin-left</code>  左外边距</p>
+</li>
+<li>
+<ul>
+<li>设置正值，元素自身向右移动</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>设置负值，元素自身向左移动</li>
+</ul>
+</li>
+</ul>
+<p>元素在页面中是按照自左向右的顺序排列的，所以默认情况下</p>
+<ul>
+<li>
+<p>如果我们设置的左和上外边距则会移动元素自身</p>
+</li>
+<li>
+<p>而设置下和右外边距会移动其他元素</p>
+</li>
+</ul>
+<p><strong>示例 1</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">10px</span> orange solid;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>注意：同时写出上下外边距，以上外边距为准，同时写出左右外边距，以左外边距为准，</strong></p>
+<p><img data-src="https://s3.bmp.ovh/imgs/2022/01/8a21256f55fd1321.png" alt=""></p>
+<p><strong>示例 2</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">10px</span> orange solid;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">100px</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box2</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">10px</span> red solid;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong></p>
+<p><img data-src="https://s3.bmp.ovh/imgs/2022/01/dcee4920ca6e98c6.png" alt=""></p>
+<h2 id="5-水平方向布局"><a class="markdownIt-Anchor" href="#5-水平方向布局">#</a> 5. 水平方向布局</h2>
+<p>元素在其<strong>父元素中水平方向</strong>的位置由以下几个属性共同决定</p>
+<ul>
+<li>
+<p><code>margin-left</code></p>
+</li>
+<li>
+<p><code>border-left</code></p>
+</li>
+<li>
+<p><code>padding-left</code></p>
+</li>
+<li>
+<p><code>width</code></p>
+</li>
+<li>
+<p><code>padding-right</code></p>
+</li>
+<li>
+<p><code>border-right</code></p>
+</li>
+<li>
+<p><code>margin-right</code></p>
+</li>
+</ul>
+<p>一个元素在其父元素中，水平布局必须要满足以下的等式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">margin-left</span> + <span class="attribute">border-left</span> + <span class="attribute">padding-left</span> + <span class="attribute">width</span> + <span class="attribute">padding-right</span> + <span class="attribute">border-right</span> + <span class="attribute">margin-right</span> = 其父元素的宽度</span><br></pre></td></tr></table></figure>
+<p>以上等式必须满足，如果相加结果使等式不成立，则称为过渡约束</p>
+<p>则等式会自动调整调整的情况：</p>
+<ul>
+<li>
+<p>如果这七个值中没有 <code>auto</code>  的情况，则浏览器会自动调整 <code>margin-right</code>  值以使等式满足<br>
+ <code>100 + 0 + 0 + 200 + 0 + 0 + 0 = 800</code>  ==&gt;  <code>100 + 0 + 0 + 200 + 0 + 0 + 500 = 800</code></p>
+</li>
+<li>
+<p>如果这七个值中有 <code>auto</code>  的情况，则会自动调整 <code>auto</code>  值以使等式成立<br>
+这七个值中有三个值可以设置为 <code>auto</code>  ： <code>width</code> 、 <code>margin-left</code> 、 <code>maring-right</code></p>
+</li>
+</ul>
+<ol>
+<li>
+<ol>
+<li>如果某个值为 auto，则会自动调整 <code>auto</code>  的那个值以使等式成立<br>
+ <code>200 + 0 + 0 + auto + 0 + 0 + 200 = 600</code>  ==&gt;  <code>200 + 0 + 0 + 400 + 0 + 0 + 200 = 800</code> <br>
+ <code>auto + 0 + 0 + 200 + 0 + 0 + 200 = 600</code>  ==&gt;  <code>400 + 0 + 0 + 200 + 0 + 0 + 200 = 800</code> <br>
+ <code>200 + 0 + 0 + 200 + 0 + 0 + auto = 600</code>  ==&gt;  <code>200 + 0 + 0 + 200 + 0 + 0 + 400 = 800</code></li>
+<li>如果宽度为 <code>width=auto</code> ，则宽度会调整到最大，其他 <code>auto</code>  的外边距会自动设置为 0<br>
+ <code>auto + 0 + 0 + auto + 0 + 0 + 200 = 600</code>  ==&gt;  <code>0 + 0 + 0 + 600 + 0 + 0 + 200 = 800</code> <br>
+ <code>200 + 0 + 0 + auto + 0 + 0 + auto = 600</code>  ==&gt;  <code>200 + 0 + 0 + 600 + 0 + 0 + 0 = 800</code> <br>
+ <code>auto + 0 + 0 + auto + 0 + 0 + auto = 600</code>  ==&gt;  <code>0 + 0 + 0 + 800 + 0 + 0 + 0 = 800</code></li>
+</ol>
+</li>
+<li>
+<ol>
+<li>如果外边距都为 padding-width = <code>auto</code> ，则 <code>auto</code>  的外边距会自动均分以使等式成立<br>
+ <code>auto + 0 + 0 + 200 + 0 + 0 + auto = 600</code>  ==&gt;  <code>300 + 0 + 0 + 200 + 0 + 0 + 300 = 800</code></li>
+</ol>
+</li>
+</ol>
+<p><strong>示例</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">    <span class="selector-class">.box1</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">10px</span> orange solid;</span></span><br><span class="line"><span class="css">        <span class="comment">/* 下列条件等价于 margin: 0 auto */</span></span></span><br><span class="line"><span class="css">        <span class="attribute">margin-left</span>: auto;</span></span><br><span class="line"><span class="css">        <span class="attribute">margin-right</span>: auto;</span></span><br><span class="line"><span class="css">    &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="6-垂直方向布局"><a class="markdownIt-Anchor" href="#6-垂直方向布局">#</a> 6. 垂直方向布局</h2>
+<h3 id="元素溢出"><a class="markdownIt-Anchor" href="#元素溢出">#</a> 元素溢出</h3>
+<p>子元素是在父元素的内容区中排列的，如果子元素的大小超过了父元素，则子元素会从父元素中溢出</p>
+<p>使用 <code>overflow</code> / <code>overflow-x</code> / <code>overflow-y</code>  属性来设置父元素如何处理溢出的子元素</p>
+<p>可选值： <code>visible</code> / <code>hidden</code> / <code>scroll</code> / <code>auto</code></p>
+<p><code>visible</code>  溢出内容会在父元素外部位置显示，默认值</p>
+<p><strong>示例</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">    <span class="selector-class">.box1</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">10px</span> orange solid;</span></span><br><span class="line"><span class="css">        <span class="attribute">overflow</span>: visible; <span class="comment">/* 默认值 */</span></span></span><br><span class="line"><span class="css">    &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span></span><br><span class="line">    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur illo inventore</span><br><span class="line">    deleniti laudantium quaerat excepturi sed quidem tempore? Eaque, cumque porro. Fuga quam error cupiditate quasi</span><br><span class="line">    eveniet in numquam!</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong></p>
+<p><img data-src="https://s3.bmp.ovh/imgs/2022/01/b2e8226eca59e78a.png" alt=""></p>
+<p><code>hidden</code>  溢出内容会被裁剪，不会显示</p>
+<p><strong>示例</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">    <span class="selector-class">.box1</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">overflow</span>: hidden; <span class="comment">/* 隐藏溢出内容 */</span></span></span><br><span class="line"><span class="css">    &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span></span><br><span class="line">    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur illo inventore</span><br><span class="line">    deleniti laudantium quaerat excepturi sed quidem tempore? Eaque, cumque porro. Fuga quam error cupiditate quasi</span><br><span class="line">    eveniet in numquam!</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong></p>
+<p><img data-src="https://s3.bmp.ovh/imgs/2022/01/980c7bbdbbe5b9ef.png" alt=""></p>
+<p><code>scroll</code>  生成两个滚动条，通过滚动条来查看完整的内容</p>
+<p><strong>示例</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">    <span class="selector-class">.box1</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">overflow</span>: scroll;</span></span><br><span class="line"><span class="css">    &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span></span><br><span class="line">    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur illo inventore</span><br><span class="line">    deleniti laudantium quaerat excepturi sed quidem tempore? Eaque, cumque porro. Fuga quam error cupiditate quasi</span><br><span class="line">    eveniet in numquam!</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong></p>
+<p><img data-src="https://s3.bmp.ovh/imgs/2022/01/bf7dec4a6ddb5366.png" alt=""></p>
+<p><code>auto</code>  根据需要生成滚动条（根据需要自动添加滚动条，只有同时需要横向与纵向滚动条时才会同时添加）</p>
+<p><strong>示例</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">    <span class="selector-class">.box1</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">overflow</span>: auto;</span></span><br><span class="line"><span class="css">    &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span></span><br><span class="line">    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur illo inventore</span><br><span class="line">    deleniti laudantium quaerat excepturi sed quidem tempore? Eaque, cumque porro. Fuga quam error cupiditate quasi</span><br><span class="line">    eveniet in numquam!</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="边距折叠"><a class="markdownIt-Anchor" href="#边距折叠">#</a> 边距折叠</h3>
+<p>垂直外边距的重叠（折叠）：相邻的垂直方向外边距会发生重叠现象</p>
+<h4 id="兄弟元素"><a class="markdownIt-Anchor" href="#兄弟元素">#</a> 兄弟元素</h4>
+<p>兄弟元素间的相邻，垂直外边距会取两者之间的较大值（两者都是正值）</p>
+<p>特殊情况：</p>
+<ul>
+<li>
+<p>如果相邻的外边距一正一负，则取两者的和</p>
+</li>
+<li>
+<p>如果相邻的外边距都是负值，则取两者中绝对值较大的</p>
+</li>
+</ul>
+<p><strong>示例</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>,<span class="selector-class">.box2</span>&#123; </span><br><span class="line">    <span class="attribute">width</span>:<span class="number">200px</span>; </span><br><span class="line">    <span class="attribute">height</span>:<span class="number">200px</span>; </span><br><span class="line">    <span class="attribute">font-size</span>:<span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.boxl</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">    <span class="comment">/*设置一个下外边距*/</span></span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box2</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: orange;</span><br><span class="line">    <span class="comment">/*设置一个上外边距*/</span></span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>总结</strong></p>
+<p>兄弟元素之间的外边距的重叠，对于开发是有利的，所以我们不需要进行处理</p>
+<h4 id="父子元素"><a class="markdownIt-Anchor" href="#父子元素">#</a> 父子元素</h4>
+<p>父子元素间相邻外边距，子元素会传递给父元素（上外边距）<strong>（此时父子元素的边框重合）</strong></p>
+<p><strong>示例</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box3</span>&#123;</span><br><span class="line"><span class="attribute">width</span>：<span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box4</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>; </span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: orange; </span><br><span class="line">    <span class="comment">/* margin-top: 100px; */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong></p>
+<p><img data-src="https://s3.bmp.ovh/imgs/2022/01/9abb0b46704ab901.png" alt=""></p>
+<p><img data-src="https://s3.bmp.ovh/imgs/2022/01/96f0560f1c855696.png" alt=""></p>
+<p>父子外边距的折叠会影响到页面的布局，必须要进行处理</p>
+<p><strong>处理方式 1</strong></p>
+<p>1、我们转换思路，将对子元素的调整转为对父元素的调整</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box3</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">100px</span>; <span class="comment">/* 不调整子元素的margin，而是转而调整父元素的padding */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box4</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: orange;</span><br><span class="line">    <span class="comment">/* margin-top: 100px; */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/7BMgQU"><img data-src="https://s4.ax1x.com/2022/01/18/7BMgQU.png" alt="7BMgQU.png"></a></p>
+<p>可以看到父元素位置虽然正确了，但是高度却被 “撑大了”。我们之前说过，padding 属性会影响元素的大小 [<a href="#fn3">3]</a></p>
+<p>2、这里我们还需要计算并手动调整下父元素的高度</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box3</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>; <span class="comment">/* height: 200px; */</span></span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">100px</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box4</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: orange;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/7BM4oR"><img data-src="https://s4.ax1x.com/2022/01/18/7BM4oR.png" alt="7BM4oR.png"></a></p>
+<p><strong>处理方式 2</strong></p>
+<p>1、我们仍然保留子元素的 <code>margin-top</code>  属性，但是给父元素加一个上边框</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box3</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">1px</span> rebeccapurple solid; <span class="comment">/* 在父元素上加一个border-top（上边框） */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box4</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: orange;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">100px</span>; <span class="comment">/* 不删除，保留 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong></p>
+<p><img data-src="https://www.hualigs.cn/image/61e6d1494e5a3.jpg" alt=""></p>
+<p>2、但是因为加了 1px 的边框，所以父元素盒子的高度也增加了 1px。那我们就需要手动调整父元素的高度，同时让边框颜色与父元素盒子颜色保持一致</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box3</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">199px</span>; <span class="comment">/* height: 200px; */</span></span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">1px</span> <span class="number">#bfa</span> solid; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box4</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: orange;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/7B2hBF"><img data-src="https://s4.ax1x.com/2022/01/18/7B2hBF.png" alt="7B2hBF.png"></a></p>
+<p>但是我们没有发现一个问题不难发现一个问题，子元素也往下移动了 1px 的距离</p>
+<p>因为父元素高度少了 1px，而子元素的 margin-top 是从边框下面开始算的</p>
+<p>所以，凭借大家朴素的情感，哪个应该怎么判？ 应该怎么改？</p>
+<p>改法也很简单，margin-top 减去一个像素即可</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box3</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">199px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">1px</span> <span class="number">#bfa</span> solid; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box4</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: orange;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">99px</span>; <span class="comment">/* margin-top: 100px; */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong></p>
+<p><img data-src="https://www.tupians.top/imgs/2022/01/dde9b27ded79fa9c.png" alt=""></p>
+<p>同时，我们用刻度尺测量，父子元素底部是在一条水平线上的</p>
+<p><img data-src="https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210521213806.png" alt="img"></p>
+<h3 id="脱离文档流"><a class="markdownIt-Anchor" href="#脱离文档流">#</a> 脱离文档流</h3>
+<p>上述示例 2 中，使用了 border 属性，就让子元素的外边距不去传递给父元素了，这是为什么呢？</p>
+<p>margin (子元素远离父元素边框)</p>
+<p>如果父盒子没有设置 border 框着，那么他的子元素无法利用 margin-top 来远离父元素的上边框</p>
+<p>如果使用了 margin-top 会使子元素和父元素一起往下移</p>
+<p>（子想离，父不设置 border 边框 则离得是流 不是父盒子）</p>
+<p>应该是 border 让元素脱离了文档流（margin 塌陷）</p>
+<p>好吧好吧，至于什么是 margin 塌陷，我也是问了度娘，有兴趣的可以自行百度，这里就不再赘述了</p>
+<h2 id="7-行内元素的盒模型"><a class="markdownIt-Anchor" href="#7-行内元素的盒模型">#</a> 7. 行内元素的盒模型</h2>
+<ul>
+<li>
+<p>行内元素不支持设置宽度和高度</p>
+<p><img data-src="https://www.tupians.top/imgs/2022/01/7adaa80a28f24b54.png" alt=""></p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.s1</span> &#123;</span><br><span class="line">    <span class="comment">/* 行内元素设置了宽高也没用，不会生效 */</span></span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>行内元素可以设置 <code>padding</code> ，但是垂直方向 <code>padding</code>  不会影响页面的布局<br>
+<img data-src="https://www.tupians.top/imgs/2022/01/fa06cadba10e8a92.png" alt=""></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.s1</span> &#123;</span><br><span class="line">    <span class="comment">/* 下方的div元素并没有因span设置了padding属性，而受到位置上的影响 */</span></span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box1</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>行内元素可以设置 <code>border</code> ，垂直方向的 <code>border</code>  不会影响页面的布局<br>
+<img data-src="https://www.tupians.top/imgs/2022/01/5aa141f791a52350.png" alt=""></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.s1</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">10px</span> orange solid;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box1</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>行内元素可以设置 <code>margin</code> ，垂直方向的 <code>margin</code>  不会影响页面的布局<br>
+<img data-src="https://www.tupians.top/imgs/2022/01/e94206bae2b368a2.png" alt=""></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.s1</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box1</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果我就是想要行内元素对页面布局产生影响呢？</p>
+<p>~~ 那就拉出去枪毙了！~~ 那也是有办法的！</p>
+<p><code>display</code>  用来设置元素显示的类型</p>
+<ul>
+<li>
+<p><code>inline</code>  将元素设置为行内元素</p>
+</li>
+<li>
+<p><code>block</code>  将元素设置为块元素<br>
+<img data-src="https://www.tupians.top/imgs/2022/01/49a588cfeddb8eec.png" alt=""></p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.s1</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="comment">/* 将行内元素设置为块元素 */</span></span><br><span class="line">    <span class="attribute">display</span>: block; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>inline-block</code>  将元素设置为行内块元素行内块，既可以设置宽度和高度又不会独占一行<br>
+<img data-src="https://www.tupians.top/imgs/2022/01/ba7eaca87f24ba8c.png" alt=""></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.s1</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="comment">/* 将行内元素设置为行内块元素，兼顾行内元素和块元素的特点 */</span></span><br><span class="line">    <span class="attribute">display</span>: inline-block; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p><code>table</code>  将元素设置为一个表格</p>
+</li>
+<li>
+<p><code>none</code>  元素不在页面中显示<br>
+<img data-src="https://www.tupians.top/imgs/2022/01/afbda03c131e696c.png" alt=""></p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.s1</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="comment">/* 将行内元素设置为none：不显示 */</span></span><br><span class="line">    <span class="attribute">display</span>: none; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>不显示是不显示了，但是原来属于 s1 的位置也没了</p>
+<p><code>visibility</code>  用来设置元素的显示状态</p>
+<ul>
+<li>
+<p><code>visible</code>  默认值，元素在页面中正常显示</p>
+</li>
+<li>
+<p><code>hidden</code>  元素在页面中隐藏不显示，但是依然占据页面的位置<br>
+<img data-src="https://www.tupians.top/imgs/2022/01/2d6b4da97a318909.png" alt=""></p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.s1</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="8-浏览器的默认样式"><a class="markdownIt-Anchor" href="#8-浏览器的默认样式">#</a> 8. 浏览器的默认样式</h2>
+<p>通常情况，浏览器都会为元素设置一些默认样式</p>
+<p>默认样式的存在会影响到页面的布局，通常情况下编写网页时必须要去除浏览器的默认样式（PC 端的页面）</p>
+<p>在当今网页设计 / 开发实践中，使用 CSS 来为语义化的 (X) HTML 标记添加样式风格是重要的关键。</p>
+<p>在设计师们的梦想中都存在着这样的一个完美世界：所有的浏览器都能够理解和适用多有 CSS 规则，并且呈现相同的视觉效果 (没有兼容性问题)。</p>
+<p>但是，我们并没有生活在这个完美的世界，现实中发生的失窃却总是恰恰相反，很多 CSS 样式在不同的浏览器中有着不同的解释和呈现。</p>
+<p>当今流行的浏览器 (如：Firefox、Opera、Internet Explorer、Chrome、Safari 等等) 中，有一些都是以自己的方式去理解 CSS 规范，这就会导致有的浏览器对 CSS 的解释与设计师的 CSS 定义初衷相冲突，使得网页的样子在某些浏览器下能正确按照设计师的想法显示</p>
+<p>而且有些浏览器却并没有按照设计师想要的样子显示出来，这就导致浏览器的兼容性问题。</p>
+<p>更糟的是，有的浏览器完全无视 CSS 的一些声明和属性。</p>
+<p>我们可以尝试编写 css 样式，以去除浏览器的默认样式</p>
+<p><strong>示例</strong></p>
+<p>html 代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我是一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我是一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我是一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">&lt;1i&gt;列表项1&lt;/1i&gt;</span><br><span class="line">&lt;1i&gt;列表项2&lt;/1i&gt;</span><br><span class="line">&lt;1i&gt;列表项3&lt;/1i&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>css 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>; </span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong></p>
+<p><img data-src="https://www.tupians.top/imgs/2022/01/63f509b82576ccb1.png" alt=""></p>
+<p><strong>F12 看盒子默认样式</strong></p>
+<ol>
+<li>
+<p><img data-src="https://www.tupians.top/imgs/2022/01/0aeff94f0aa88a0d.png" alt=""></p>
+</li>
+<li>
+<p>段落之间有 16px 的默认行距<br>
+<img data-src="https://www.tupians.top/imgs/2022/01/f65ca7735ad1414e.png" alt=""></p>
+</li>
+<li>
+<p>列表外有 16px 的上下外边距和 40px 的左内边距，而且每项列表前有一个小黑点<br>
+<img data-src="https://www.tupians.top/imgs/2022/01/149e2ac03e58e484.png" alt=""></p>
+</li>
+</ol>
+<p><strong>去除默认样式</strong></p>
+<ol>
+<li>去除与浏览器的边缘间距<br>
+<img data-src="https://www.tupians.top/imgs/2022/01/cdb92147e727a93a.png" alt=""></li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>去除段落之间行距<br>
+<img data-src="https://www.tupians.top/imgs/2022/01/57847077739e76cc.png" alt=""></li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>去除列表的上下外边距和左内边距<br>
+<img data-src="https://www.tupians.top/imgs/2022/01/aa51b514e2362c4e.png" alt=""><br>
+我们只是去除了列表的内外边距，但是发现前面的黑点也消失了，真的如此吗？<br>
+我们先给 <code>ul</code>  加上一个 <code>margin-left</code> <br>
+<img data-src="https://www.tupians.top/imgs/2022/01/9c4aab0ff2f10415.png" alt=""><br>
+ 看来黑点并没有自动清除，而只是 “缩进” 了浏览器的左侧</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>去除列表前的黑点<br>
+<img data-src="https://www.tupians.top/imgs/2022/01/5fe53db7e5497a4a.png" alt=""><br>
+再将之前加的 16px 的 <code>margin-left</code>  样式去除</li>
+<li><img data-src="https://www.tupians.top/imgs/2022/01/30fc99b97ba05166.png" alt="">到这里似乎就大功告成了，但是我们会发现写法似乎 很完美 有点麻烦<br>
+有没有简化空间了呢？<br>
+答案是肯定的，我们前面介绍过通配选择器的概念，可以直接简化成一个</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="comment">/* margin-left: 16px; */</span></span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>简化写法<br>
+效果是一样的</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>去除浏览器的默认样式的需求是非常普遍的，我们难道每次都需要手动去除浏览器的默认样式？</p>
+<p>这样岂不是很麻烦，难道官方就没有想到解决方案吗？</p>
+<p>答案也是肯定的，有！</p>
+<p>正因为上述冲突和问题依然存在于这个” 不完美的世界”，所以一些设计师想到了一种避免浏览器兼容性问题的方法，那就是 CSS Reset</p>
+<p>什么是 CSS Reset？</p>
+<p>我们可以把它叫做 CSS 重设，也有人叫做 CSS 复位、默认 CSS、CSS 重置等。</p>
+<p>CSS 重设就是先定义好一些 CSS 样式，来让所有浏览器都按照同样的规则解释 CSS，这样就能避免发生这种问题。</p>
+<p>下方两种 css 样式，我们引入其中一个即可</p>
+<h3 id="reset样式"><a class="markdownIt-Anchor" href="#reset样式">#</a> reset 样式</h3>
+<p>官方地址：<span class="exturl" data-url="aHR0cHM6Ly9tZXllcndlYi5jb20vZXJpYy90b29scy9jc3MvcmVzZXQv">reset.css</span></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;assets/reset.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong></p>
+<p><img data-src="https://www.tupians.top/imgs/2022/01/8995f28f046d4d18.png" alt=""></p>
+<p>我们可以看到 reset.css 的作用就是将各个内外边距置为 0，将一些样式置为 none</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* http://meyerweb.com/eric/tools/css/reset/ </span></span><br><span class="line"><span class="comment">   v2.0 | 20110126</span></span><br><span class="line"><span class="comment">   License: none (public domain)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">html</span>, <span class="selector-tag">body</span>, <span class="selector-tag">div</span>, <span class="selector-tag">span</span>, applet, <span class="selector-tag">object</span>, <span class="selector-tag">iframe</span>,</span><br><span class="line"><span class="selector-tag">h1</span>, <span class="selector-tag">h2</span>, <span class="selector-tag">h3</span>, <span class="selector-tag">h4</span>, <span class="selector-tag">h5</span>, <span class="selector-tag">h6</span>, <span class="selector-tag">p</span>, <span class="selector-tag">blockquote</span>, pre,</span><br><span class="line"><span class="selector-tag">a</span>, <span class="selector-tag">abbr</span>, acronym, <span class="selector-tag">address</span>, big, <span class="selector-tag">cite</span>, <span class="selector-tag">code</span>,</span><br><span class="line"><span class="selector-tag">del</span>, <span class="selector-tag">dfn</span>, <span class="selector-tag">em</span>, <span class="selector-tag">img</span>, <span class="selector-tag">ins</span>, <span class="selector-tag">kbd</span>, <span class="selector-tag">q</span>, s, <span class="selector-tag">samp</span>,</span><br><span class="line">small, strike, <span class="selector-tag">strong</span>, sub, <span class="selector-tag">sup</span>, tt, <span class="selector-tag">var</span>,</span><br><span class="line"><span class="selector-tag">b</span>, u, <span class="selector-tag">i</span>, center,</span><br><span class="line"><span class="selector-tag">dl</span>, <span class="selector-tag">dt</span>, <span class="selector-tag">dd</span>, <span class="selector-tag">ol</span>, <span class="selector-tag">ul</span>, <span class="selector-tag">li</span>,</span><br><span class="line"><span class="selector-tag">fieldset</span>, <span class="selector-tag">form</span>, <span class="selector-tag">label</span>, <span class="selector-tag">legend</span>,</span><br><span class="line"><span class="selector-tag">table</span>, <span class="selector-tag">caption</span>, <span class="selector-tag">tbody</span>, <span class="selector-tag">tfoot</span>, <span class="selector-tag">thead</span>, <span class="selector-tag">tr</span>, <span class="selector-tag">th</span>, <span class="selector-tag">td</span>,</span><br><span class="line"><span class="selector-tag">article</span>, <span class="selector-tag">aside</span>, <span class="selector-tag">canvas</span>, <span class="selector-tag">details</span>, embed, </span><br><span class="line"><span class="selector-tag">figure</span>, <span class="selector-tag">figcaption</span>, <span class="selector-tag">footer</span>, <span class="selector-tag">header</span>, <span class="selector-tag">hgroup</span>, </span><br><span class="line"><span class="selector-tag">menu</span>, <span class="selector-tag">nav</span>, output, ruby, <span class="selector-tag">section</span>, <span class="selector-tag">summary</span>,</span><br><span class="line"><span class="selector-tag">time</span>, <span class="selector-tag">mark</span>, <span class="selector-tag">audio</span>, <span class="selector-tag">video</span> &#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">font</span>: inherit;</span><br><span class="line">	<span class="attribute">vertical-align</span>: baseline;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* HTML5 display-role reset for older browsers */</span></span><br><span class="line"><span class="selector-tag">article</span>, <span class="selector-tag">aside</span>, <span class="selector-tag">details</span>, <span class="selector-tag">figcaption</span>, <span class="selector-tag">figure</span>, </span><br><span class="line"><span class="selector-tag">footer</span>, <span class="selector-tag">header</span>, <span class="selector-tag">hgroup</span>, <span class="selector-tag">menu</span>, <span class="selector-tag">nav</span>, <span class="selector-tag">section</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ol</span>, <span class="selector-tag">ul</span> &#123;</span><br><span class="line">	<span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">blockquote</span>, <span class="selector-tag">q</span> &#123;</span><br><span class="line">	<span class="attribute">quotes</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">blockquote</span>:before, blockquote:after,</span><br><span class="line">q:before, q:after &#123;</span><br><span class="line">	content: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">	<span class="attribute">content</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">table</span> &#123;</span><br><span class="line">	<span class="attribute">border-collapse</span>: collapse;</span><br><span class="line">	<span class="attribute">border-spacing</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="normalize样式"><a class="markdownIt-Anchor" href="#normalize样式">#</a> normalize 样式</h3>
+<p>官方地址：<span class="exturl" data-url="aHR0cHM6Ly9uZWNvbGFzLmdpdGh1Yi5pby9ub3JtYWxpemUuY3NzLzguMC4xL25vcm1hbGl6ZS5jc3M=">normalize.css</span></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/normalize<span class="selector-class">.css</span>&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong></p>
+<p><img data-src="https://www.tupians.top/imgs/2022/01/adb5142e24d23d3e.png" alt=""></p>
+<p>这里并没有去除所有样式，因为 normalize 的作用不同于 reset。reset 是将所有默认样式去除，而 normalize 是将所有默认样式统一，这样在不同的浏览器里显示效果也是统一的</p>
+<p>至于文件内容就不再这里赘述了，感兴趣的可以仔细研究</p>
+<hr>
+<p><strong>参考资料</strong></p>
+<hr>
+<ol>
+<li>
+<p>CSS 盒子模型：<span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9DU1MlRTclOUIlOTIlRTUlQUQlOTAlRTYlQTglQTElRTUlOUUlOEIvOTgxNDU2Mj9mcj1hbGFkZGlu">https://baike.baidu.com/item/CSS 盒子模型 / 9814562?fr=aladdin</span> <a href="#fnref1">↩︎</a></p>
+</li>
+<li>
+<p>谷歌、火狐浏览器 缩放为 80% 时，margin 值才正确：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vdGFvaHVheWEvcC83NjQyNzQyLmh0bWw=">https://www.cnblogs.com/taohuaya/p/7642742.html</span> <a href="#fnref2">↩︎</a></p>
+</li>
+<li>
+<p>内边距的设置会影响到盒子的大小，背景颜色会延伸到内边距上 <a href="#fnref3">↩︎</a></p>
+</li>
+<li>
+<p>margin (子元素远离父元素边框)：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vRmxGdEZ3L3AvOTYyNzAyNi5odG1s">https://www.cnblogs.com/FlFtFw/p/9627026.html</span> <a href="#fnref4">↩︎</a></p>
+</li>
+<li>
+<p>目前比较全的 CSS 重设 (reset) 方法总结：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vaG55ZWkvYXJjaGl2ZS8yMDExLzEwLzA0LzIxOTg3NzkuaHRtbA==">https://www.cnblogs.com/hnyei/archive/2011/10/04/2198779.html</span> <a href="#fnref5">↩︎</a> <a href="#fnref5:1">↩︎</a></p>
+</li>
+</ol>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-01-18 23:05:48" itemprop="dateModified" datetime="2022-01-18T23:05:48+08:00">2022-01-18</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="John Doe 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="John Doe 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="John Doe 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>John Doe <i class="ic i-at"><em>@</em></i>Hexo
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://sun-spots.github.io/2022/01/15/%E7%9B%92%E6%A8%A1%E5%9E%8B/" title="盒模型">https://sun-spots.github.io/2022/01/15/盒模型/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/01/14/css%E6%A0%B7%E5%BC%8F%E3%80%81%E7%BB%A7%E6%89%BF%E3%80%81%E6%9D%83%E9%87%8D/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhtuo6nj20zk0m8ttm.jpg" title="css样式、继承、权重">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> web前端</span>
+  <h3>css样式、继承、权重</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2022/01/15/MySQL%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%8Asql%E6%B3%A8%E5%85%A5/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicit31ffoj20zk0m8naf.jpg" title="MySQL基本语法及sql注入">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 信息安全—网络渗透</span>
+  <h3>MySQL基本语法及sql注入</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text"> 盒模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B-2"><span class="toc-number">2.</span> <span class="toc-text"> 盒模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%96%87%E6%A1%A3%E6%B5%81normalflow"><span class="toc-number">2.1.</span> <span class="toc-text"> 1. 文档流（normalflow）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%9D%97%E5%85%83%E7%B4%A0"><span class="toc-number">2.2.</span> <span class="toc-text"> 2. 块元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0"><span class="toc-number">2.3.</span> <span class="toc-text"> 3. 行内元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.4.</span> <span class="toc-text"> 4. 盒子模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B-%E6%A1%86%E6%A8%A1%E5%9E%8Bbox-model"><span class="toc-number">2.4.1.</span> <span class="toc-text"> 盒模型、盒子模型、框模型（box model）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E5%8C%BAcontent"><span class="toc-number">2.4.2.</span> <span class="toc-text"> 内容区（content）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%B9%E6%A1%86border"><span class="toc-number">2.4.3.</span> <span class="toc-text"> 边框（border）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E8%BE%B9%E8%B7%9Dpadding"><span class="toc-number">2.4.4.</span> <span class="toc-text"> 内边距 (padding）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9Dmargin"><span class="toc-number">2.4.5.</span> <span class="toc-text"> 外边距（margin）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E5%B8%83%E5%B1%80"><span class="toc-number">2.5.</span> <span class="toc-text"> 5. 水平方向布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E5%B8%83%E5%B1%80"><span class="toc-number">2.6.</span> <span class="toc-text"> 6. 垂直方向布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E6%BA%A2%E5%87%BA"><span class="toc-number">2.6.1.</span> <span class="toc-text"> 元素溢出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%B9%E8%B7%9D%E6%8A%98%E5%8F%A0"><span class="toc-number">2.6.2.</span> <span class="toc-text"> 边距折叠</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%84%E5%BC%9F%E5%85%83%E7%B4%A0"><span class="toc-number">2.6.2.1.</span> <span class="toc-text"> 兄弟元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%88%B6%E5%AD%90%E5%85%83%E7%B4%A0"><span class="toc-number">2.6.2.2.</span> <span class="toc-text"> 父子元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%B1%E7%A6%BB%E6%96%87%E6%A1%A3%E6%B5%81"><span class="toc-number">2.6.3.</span> <span class="toc-text"> 脱离文档流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E7%9A%84%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.7.</span> <span class="toc-text"> 7. 行内元素的盒模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E9%BB%98%E8%AE%A4%E6%A0%B7%E5%BC%8F"><span class="toc-number">2.8.</span> <span class="toc-text"> 8. 浏览器的默认样式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#reset%E6%A0%B7%E5%BC%8F"><span class="toc-number">2.8.1.</span> <span class="toc-text"> reset 样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#normalize%E6%A0%B7%E5%BC%8F"><span class="toc-number">2.8.2.</span> <span class="toc-text"> normalize 样式</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2022/01/13/CSS%E8%AF%AD%E6%B3%95%E4%B8%8E%E9%80%89%E6%8B%A9%E5%99%A8/" rel="bookmark" title="CSS语法与选择器">CSS语法与选择器</a></li><li><a href="/2022/01/14/css%E6%A0%B7%E5%BC%8F%E3%80%81%E7%BB%A7%E6%89%BF%E3%80%81%E6%9D%83%E9%87%8D/" rel="bookmark" title="css样式、继承、权重">css样式、继承、权重</a></li><li class="active"><a href="/2022/01/15/%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="bookmark" title="盒模型">盒模型</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="John Doe"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">John Doe</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">8</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2022/01/14/css%E6%A0%B7%E5%BC%8F%E3%80%81%E7%BB%A7%E6%89%BF%E3%80%81%E6%9D%83%E9%87%8D/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2022/01/15/MySQL%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%8Asql%E6%B3%A8%E5%85%A5/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E2%80%94%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F/" title="分类于 信息安全—网络渗透">信息安全—网络渗透</a>
+</div>
+
+    <span><a href="/2022/01/11/%E4%BF%AE%E6%94%B9/2022-01-11-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络">计算机网络</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/2022/01/14/css%E6%A0%B7%E5%BC%8F%E3%80%81%E7%BB%A7%E6%89%BF%E3%80%81%E6%9D%83%E9%87%8D/" title="css样式、继承、权重">css样式、继承、权重</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E2%80%94%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F/" title="分类于 信息安全—网络渗透">信息安全—网络渗透</a>
+</div>
+
+    <span><a href="/2022/01/10/%E4%BF%AE%E6%94%B9/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="计算机的基本概念">计算机的基本概念</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/2022/01/15/%E7%9B%92%E6%A8%A1%E5%9E%8B/" title="盒模型">盒模型</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/2022/01/13/CSS%E8%AF%AD%E6%B3%95%E4%B8%8E%E9%80%89%E6%8B%A9%E5%99%A8/" title="CSS语法与选择器">CSS语法与选择器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E2%80%94%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F/" title="分类于 信息安全—网络渗透">信息安全—网络渗透</a>
+</div>
+
+    <span><a href="/2022/01/15/MySQL%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%8Asql%E6%B3%A8%E5%85%A5/" title="MySQL基本语法及sql注入">MySQL基本语法及sql注入</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/01/18/%E4%BF%AE%E6%94%B9/%E8%99%9A%E6%8B%9F%E7%9B%AE%E5%BD%95%EF%BC%9A%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E5%AD%90%E7%BD%91%E7%AB%99/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E2%80%94%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F/" title="分类于 信息安全—网络渗透">信息安全—网络渗透</a>
+</div>
+
+    <span><a href="/2022/01/13/%E4%BF%AE%E6%94%B9/web%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA/" title="web站点搭建">web站点搭建</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe @ Yume Shoka</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/01/15/盒模型/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
