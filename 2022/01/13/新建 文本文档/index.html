@@ -1,0 +1,636 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Hexo" href="https://sun-spots.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Hexo" href="https://sun-spots.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Hexo" href="https://sun-spots.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://sun-spots.github.io/2022/01/13/%E6%96%B0%E5%BB%BA%20%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/">
+
+
+
+  <title>
+CSS圆角、阴影、轮廓 - web前端 |
+Yume Shoka = Hexo</title>
+<meta name="generator" content="Hexo 6.0.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">CSS圆角、阴影、轮廓
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-01-13 19:59:12">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-01-13T19:59:12+08:00">2022-01-13</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicljgocqbj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexbei4hj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/web/" itemprop="item" rel="index" title="分类于 web前端"><span itemprop="name">web前端</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://sun-spots.github.io/2022/01/13/%E6%96%B0%E5%BB%BA%20%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="John Doe">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="盒模型补充"><a class="markdownIt-Anchor" href="#盒模型补充">#</a> 盒模型补充</h1>
+<p>笔记来源：<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVhKNDExWDdVZA==">尚硅谷 Web 前端 HTML5&amp;CSS3 初学者零基础入门全套完整版</span></p>
+<h2 id="1-盒子大小"><a class="markdownIt-Anchor" href="#1-盒子大小">#</a> 1. 盒子大小</h2>
+<p>默认情况下，盒子可见框的大小由内容区、内边距和边框共同决定</p>
+<p><code>box-sizing</code>  用来设置盒子尺寸的计算方式（设置 width 和 height 的作用）</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">10px</span> red solid;</span><br><span class="line">    <span class="comment">/* box-sizing: content-box; */</span></span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可选值：</p>
+<ul>
+<li>
+<p><code>content-box</code>  默认值，宽度和高度用来设置<strong>内容区</strong>的大小<br>
+<img data-src="https://s3.bmp.ovh/imgs/2022/01/b5948be605e74d19.png" alt=""></p>
+</li>
+<li>
+<p><code>border-box</code>  宽度和高度用来设置<strong>整个盒子</strong>可见框的大小 **（ <code>width</code>  和 <code>height</code>  指的是内容区、内边距和边框的总大小）**</p>
+</li>
+</ul>
+<p><img data-src="https://s3.bmp.ovh/imgs/2022/01/da81441fecd3130a.png" alt=""></p>
+<h2 id="2-轮廓"><a class="markdownIt-Anchor" href="#2-轮廓">#</a> 2. 轮廓</h2>
+<p><code>outline</code>  用来设置元素的轮廓线，用法和 <code>border</code>  一模一样</p>
+<p>轮廓和边框不同点是，轮廓不会影响到可见框的大小</p>
+<p><strong>边框</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">10px</span> red solid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210523193430.png" alt="img"></p>
+<p><strong>轮廓</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="attribute">outline</span>: <span class="number">10px</span> red solid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210523193328.png" alt="img"></p>
+<p>可以很明显看到 <code>outline</code>  与 <code>border</code>  的区别</p>
+<p>我们一般不会直接这么设置轮廓，而是下面这种场景</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">outline</span>: <span class="number">10px</span> red solid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210523193733.gif" alt="img"></p>
+<p>从上面的动态图也可以很清晰地看出， <code>outline</code>  属性并没有改变盒子的布局</p>
+<h2 id="3-阴影"><a class="markdownIt-Anchor" href="#3-阴影">#</a> 3. 阴影</h2>
+<p><code>box-shadow</code>  属性用于在一个元素的框架周围添加阴影效果</p>
+<p>你可以设置多个由逗号分隔的效果</p>
+<p>一个盒状阴影由相对于元素的 X 和 Y 的偏移量、模糊和扩散半径以及颜色来描述</p>
+<p><code>box-shadow</code>  用来设置元素的阴影效果，阴影不会影响页面布局</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> orange;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210523200020.png" alt="img"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="number">5px</span> orange;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210523200056.png" alt="img"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210523201711.png" alt="img"></p>
+<ul>
+<li>
+<p>第一个值 - 水平偏移量：设置阴影的水平位置</p>
+</li>
+<li>
+<ul>
+<li>正值向右移动</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>负值向左移动</li>
+</ul>
+</li>
+<li>
+<p>第二个值 - 垂直偏移量：设置阴影的垂直位置</p>
+</li>
+<li>
+<ul>
+<li>正值向下移动</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>负值向上移动</li>
+</ul>
+</li>
+<li>
+<p>第三个值 - 阴影的模糊半径</p>
+</li>
+<li>
+<p>第四个值 - 阴影的颜色</p>
+</li>
+</ul>
+<h2 id="4-圆角"><a class="markdownIt-Anchor" href="#4-圆角">#</a> 4. 圆角</h2>
+<p><code>border-radius</code>  属性使一个元素的外边框边缘的角变圆</p>
+<p>你可以设置一个半径来做圆角，或者设置两个半径来做椭圆角</p>
+<p><code>border-radius</code>  用来设置圆角，圆角设置的是圆的半径大小</p>
+<ul>
+<li>
+<p><code>border-top-left-radius</code></p>
+</li>
+<li>
+<p><code>border-top-right-radius</code></p>
+</li>
+<li>
+<p><code>border-bottom-left-radius</code></p>
+</li>
+<li>
+<p><code>border-bottom-right-radius</code></p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">border-radius</span>: <span class="number">20px</span>;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210523200800.png" alt="img"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">border-top-right-radius</span>: <span class="number">50px</span> <span class="number">100px</span>;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210523201043.png" alt="img"></p>
+<p><code>border-radius</code>  可以分别指定四个角的圆角</p>
+<ul>
+<li>
+<p>四个值： <code>左上</code>    <code>右上</code>    <code>右下</code>    <code>左下</code></p>
+</li>
+<li>
+<p>三个值： <code>左上</code>    <code>右上/左下</code>    <code>右下</code></p>
+</li>
+<li>
+<p>两个值： <code>左上/右下</code>    <code>右上/左下</code></p>
+</li>
+<li>
+<p>一个值： <code>左上/右上/右下/左下</code></p>
+</li>
+</ul>
+<p>这里同样不需要死记硬背，只要记住遵循顺时针方向和矩形中心点对称原则</p>
+<p>与 <code>border</code>  不同的是， <code>border</code>  是从 <code>上</code> 开始顺时针设置，而圆角是从 <code>左上</code> 开始</p>
+<h3 id="圆"><a class="markdownIt-Anchor" href="#圆">#</a> 圆</h3>
+<p>原理很简单，就是绘制正方形，并将四个圆角半径设置为正方形的一半</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210523201707.png" alt="img"></p>
+<h3 id="椭圆"><a class="markdownIt-Anchor" href="#椭圆">#</a> 椭圆</h3>
+<p>只需要对上述样式对一点点的改动，设置 <code>width</code>  和 <code>height</code>  属性不相等即可</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210523202032.png" alt="img"></p>
+<h2 id="5-田径场实战"><a class="markdownIt-Anchor" href="#5-田径场实战">#</a> 5. 田径场实战</h2>
+<p>html 代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box2&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box3&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box4&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box5&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box6&quot;</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box7&quot;</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box8&quot;</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;boxRect&quot;</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;boxCirc&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;boxRectLeft1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;boxRectRight1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>css 样式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#DA251E</span>;</span><br><span class="line">    <span class="comment">/* 这里使用css的一个表达式，方便加减乘除计算 */</span></span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">0</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">0</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0.5px</span> white solid;</span><br><span class="line">    <span class="comment">/* 圆角 */</span></span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">0</span>) / <span class="number">50%</span>;</span><br><span class="line">    <span class="comment">/* 盒子 */</span></span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box2</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">1</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">1</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">12.2px</span> auto;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0.5px</span> white solid;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">1</span>) / <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box3</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">2</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">2</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">12.2px</span> auto;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0.5px</span> white solid;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">2</span>) / <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box4</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">3</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">3</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">12.2px</span> auto;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0.5px</span> white solid;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">3</span>) / <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box5</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">4</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">4</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">12.2px</span> auto;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0.5px</span> white solid;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">4</span>) / <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box6</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">5</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">5</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">12.2px</span> auto;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0.5px</span> white solid;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">5</span>) / <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box7</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">6</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">6</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">12.2px</span> auto;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0.5px</span> white solid;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">6</span>) / <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box8</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#00923F</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">7</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">7</span>*<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">12.2px</span> auto;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0.5px</span> white solid;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">7</span>) / <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.boxRect</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">7</span>*<span class="number">2</span> - <span class="number">10px</span>);</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">5px</span> auto;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0.5px</span> white solid;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.boxCirc</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="built_in">calc</span>((<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">7</span>*<span class="number">2</span> - <span class="number">10px</span> - <span class="number">100px</span>)/<span class="number">2</span>) auto;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0.5px</span> white solid;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.boxRectLeft1</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="built_in">calc</span>(-<span class="number">360px</span>*<span class="number">2</span>/<span class="number">2</span> + <span class="number">12.2px</span>*<span class="number">7</span>*<span class="number">2</span>/<span class="number">2</span> + <span class="number">10px</span> - <span class="number">200px</span>/<span class="number">2</span>);</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0.5px</span> white solid;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.boxRectRight1</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="built_in">calc</span>(-<span class="number">360px</span>*<span class="number">2</span>/<span class="number">2</span> + <span class="number">12.2px</span>*<span class="number">7</span>*<span class="number">2</span>/<span class="number">2</span> + <span class="number">10px</span> + <span class="number">50px</span>);</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> - <span class="number">100px</span>);</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0.5px</span> white solid;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果图</strong></p>
+<p><img data-src="https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210523215907.png" alt="img"></p>
+<p>由于因为到目前为止，还没有学习更多的布局定位知识，所以一些其他的细节地方比较难绘制</p>
+<p>这里就大概绘制一个雏形出来，等后面学习了绝对定位和相对定位之后再做补充和完善，会相对容易一些</p>
+<hr>
+<h3 id="绿茵足球场完善"><a class="markdownIt-Anchor" href="#绿茵足球场完善">#</a> 绿茵足球场完善</h3>
+<p>学完了浮动，我们终于可以继续完善绿茵足球场了</p>
+<p>废话不多说，直接上代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>田径场<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">        <span class="comment">/* 公共部分 */</span></span></span><br><span class="line"><span class="css">        <span class="selector-class">.box1</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box2</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box3</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box4</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box5</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box6</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box7</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box8</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxRect</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxColLine</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxRectLeft1</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxRectLeft2</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxCircLeft</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxCirc</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxCircRight</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxRectRight1</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxRectRight2</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.football</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">box-sizing</span>: border-box;</span></span><br><span class="line"><span class="css">            <span class="attribute">border</span>: <span class="number">0.5px</span> white solid;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.box2</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box3</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box4</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box5</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box6</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box7</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box8</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">margin</span>: <span class="number">12.2px</span> auto;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxRectLeft1</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxRectLeft2</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxCircLeft</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="css">            <span class="comment">/* 去除左边框 */</span></span></span><br><span class="line"><span class="css">            <span class="attribute">border-left</span>: none;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxCircRight</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxRectRight1</span>,</span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxRectRight2</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">float</span>: right;</span></span><br><span class="line"><span class="css">            <span class="comment">/* 去除右边框 */</span></span></span><br><span class="line"><span class="css">            <span class="attribute">border-right</span>: none;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="comment">/* ==========田径场========== */</span></span></span><br><span class="line"><span class="css">        <span class="selector-class">.box1</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">background-color</span>: <span class="number">#DA251E</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">0</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">0</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span></span><br><span class="line"><span class="css">            <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">0</span>) / <span class="number">50%</span>;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.box2</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">1</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">1</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">1</span>) / <span class="number">50%</span>;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.box3</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">2</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">2</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">2</span>) / <span class="number">50%</span>;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.box4</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">3</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">3</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">3</span>) / <span class="number">50%</span>;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.box5</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">4</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">4</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">4</span>) / <span class="number">50%</span>;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.box6</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">5</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">5</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">5</span>) / <span class="number">50%</span>;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.box7</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">6</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">6</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">6</span>) / <span class="number">50%</span>;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.box8</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">background-color</span>: <span class="number">#00923F</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span> + <span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">7</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">7</span>*<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">border-radius</span>: <span class="built_in">calc</span>(<span class="number">360px</span> - <span class="number">12.2px</span>*<span class="number">7</span>) / <span class="number">50%</span>;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="comment">/* ==========绿茵足球场========== */</span></span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxRect</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">7</span>*<span class="number">2</span> - <span class="number">10px</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">margin</span>: <span class="number">5px</span> auto;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxRectLeft1</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">margin-top</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span>/<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">7</span>*<span class="number">2</span>/<span class="number">2</span> - <span class="number">10px</span>/<span class="number">2</span> - <span class="number">200px</span>/<span class="number">2</span>);</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxRectLeft2</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">margin-top</span>: <span class="built_in">calc</span>(<span class="number">200px</span>/<span class="number">2</span> - <span class="number">100px</span>/<span class="number">2</span>);</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxCircLeft</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">margin-top</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span>/<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">7</span>*<span class="number">2</span>/<span class="number">2</span> - <span class="number">10px</span>/<span class="number">2</span> - <span class="number">100px</span>/<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">border-radius</span>: <span class="number">0</span> <span class="number">100px</span> <span class="number">100px</span> <span class="number">0</span>;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxCirc</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">margin</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span>/<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">7</span>*<span class="number">2</span>/<span class="number">2</span> - <span class="number">10px</span>/<span class="number">2</span> - <span class="number">100px</span>/<span class="number">2</span>) auto;</span></span><br><span class="line"><span class="css">            <span class="attribute">margin-left</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span>/<span class="number">2</span> - <span class="number">100px</span> - <span class="number">50px</span> - <span class="number">100px</span>/<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxCircRight</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">margin-top</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span>/<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">7</span>*<span class="number">2</span>/<span class="number">2</span> - <span class="number">10px</span>/<span class="number">2</span> - <span class="number">100px</span>/<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="attribute">border-radius</span>: <span class="number">100px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxRectRight1</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">margin-top</span>: <span class="built_in">calc</span>(<span class="number">360px</span>*<span class="number">2</span>/<span class="number">2</span> - <span class="number">12.2px</span>*<span class="number">7</span>*<span class="number">2</span>/<span class="number">2</span> - <span class="number">10px</span>/<span class="number">2</span> - <span class="number">200px</span>/<span class="number">2</span>);</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxRectRight2</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">margin-top</span>: <span class="built_in">calc</span>(<span class="number">200px</span>/<span class="number">2</span> - <span class="number">100px</span>/<span class="number">2</span>);</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="selector-class">.boxColLine</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">margin-left</span>: <span class="built_in">calc</span>(<span class="number">1719.2px</span>/<span class="number">2</span>/<span class="number">2</span>);</span></span><br><span class="line"><span class="css">            <span class="comment">/* 边框样式 */</span></span></span><br><span class="line"><span class="css">            <span class="attribute">border</span>: <span class="number">0.25px</span> white dashed;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">        <span class="comment">/* ==========足球========== */</span></span></span><br><span class="line"><span class="css">        <span class="selector-class">.football</span> &#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">float</span>: right;</span></span><br><span class="line"><span class="css">            <span class="attribute">width</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">height</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">background-color</span>: black;</span></span><br><span class="line"><span class="css">            <span class="attribute">margin</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">            <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span></span><br><span class="line"><span class="css">        &#125;</span></span><br><span class="line"><span class="css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box2&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box3&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box4&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box5&quot;</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box6&quot;</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box7&quot;</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box8&quot;</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;boxRect&quot;</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;boxRectLeft1&quot;</span>&gt;</span></span><br><span class="line">                                            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;boxRectLeft2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;boxCircLeft&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;boxCirc&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;boxRectRight1&quot;</span>&gt;</span></span><br><span class="line">                                            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;boxRectRight2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;boxCircRight&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                                        <span class="comment">&lt;!-- 足球 --&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;football&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;boxColLine&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这次主要的改动如下：</p>
+<ul>
+<li>
+<p>提取公共 css 代码</p>
+</li>
+<li>
+<p>使用 <code>float</code>  属性进行布局</p>
+</li>
+<li>
+<p>删除重叠部分边框样式（叠加之后颜色会变粗，这里去掉同一侧的边框样式）</p>
+</li>
+</ul>
+<p>不过需要注意的是由于 <code>boxColLine</code>  不是 <code>float</code>  元素，应该放置最下方</p>
+<p>这样可以利用浮动的特点，防止对布局产生影响</p>
+<p><strong>最终效果</strong></p>
+<p><img data-src="https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210525004853.png" alt="img"></p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-01-18 23:59:43" itemprop="dateModified" datetime="2022-01-18T23:59:43+08:00">2022-01-18</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="John Doe 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="John Doe 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="John Doe 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>John Doe <i class="ic i-at"><em>@</em></i>Hexo
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://sun-spots.github.io/2022/01/13/%E6%96%B0%E5%BB%BA%20%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/" title="CSS圆角、阴影、轮廓">https://sun-spots.github.io/2022/01/13/新建 文本文档/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/01/11/%E4%BF%AE%E6%94%B9/2022-01-11-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipewr8iypj20zk0m8b29.jpg" title="计算机网络">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 信息安全—网络渗透</span>
+  <h3>计算机网络</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2022/01/13/CSS%E8%AF%AD%E6%B3%95%E4%B8%8E%E9%80%89%E6%8B%A9%E5%99%A8/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeudstjqj20zk0m8k3r.jpg" title="CSS语法与选择器">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> web前端</span>
+  <h3>CSS语法与选择器</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B%E8%A1%A5%E5%85%85"><span class="toc-number">1.</span> <span class="toc-text"> 盒模型补充</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%9B%92%E5%AD%90%E5%A4%A7%E5%B0%8F"><span class="toc-number">1.1.</span> <span class="toc-text"> 1. 盒子大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%BD%AE%E5%BB%93"><span class="toc-number">1.2.</span> <span class="toc-text"> 2. 轮廓</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%98%B4%E5%BD%B1"><span class="toc-number">1.3.</span> <span class="toc-text"> 3. 阴影</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%9C%86%E8%A7%92"><span class="toc-number">1.4.</span> <span class="toc-text"> 4. 圆角</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%86"><span class="toc-number">1.4.1.</span> <span class="toc-text"> 圆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A4%AD%E5%9C%86"><span class="toc-number">1.4.2.</span> <span class="toc-text"> 椭圆</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%94%B0%E5%BE%84%E5%9C%BA%E5%AE%9E%E6%88%98"><span class="toc-number">1.5.</span> <span class="toc-text"> 5. 田径场实战</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%BF%E8%8C%B5%E8%B6%B3%E7%90%83%E5%9C%BA%E5%AE%8C%E5%96%84"><span class="toc-number">1.5.1.</span> <span class="toc-text"> 绿茵足球场完善</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2022/01/13/CSS%E8%AF%AD%E6%B3%95%E4%B8%8E%E9%80%89%E6%8B%A9%E5%99%A8/" rel="bookmark" title="CSS语法与选择器">CSS语法与选择器</a></li><li class="active"><a href="/2022/01/13/%E6%96%B0%E5%BB%BA%20%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/" rel="bookmark" title="CSS圆角、阴影、轮廓">CSS圆角、阴影、轮廓</a></li><li><a href="/2022/01/14/css%E6%A0%B7%E5%BC%8F%E3%80%81%E7%BB%A7%E6%89%BF%E3%80%81%E6%9D%83%E9%87%8D/" rel="bookmark" title="css样式、继承、权重">css样式、继承、权重</a></li><li><a href="/2022/01/15/%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="bookmark" title="盒模型">盒模型</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="John Doe"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">John Doe</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">10</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2022/01/11/%E4%BF%AE%E6%94%B9/2022-01-11-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2022/01/13/CSS%E8%AF%AD%E6%B3%95%E4%B8%8E%E9%80%89%E6%8B%A9%E5%99%A8/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/2022/01/13/CSS%E8%AF%AD%E6%B3%95%E4%B8%8E%E9%80%89%E6%8B%A9%E5%99%A8/" title="CSS语法与选择器">CSS语法与选择器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/2022/01/14/css%E6%A0%B7%E5%BC%8F%E3%80%81%E7%BB%A7%E6%89%BF%E3%80%81%E6%9D%83%E9%87%8D/" title="css样式、继承、权重">css样式、继承、权重</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/2022/01/15/%E7%9B%92%E6%A8%A1%E5%9E%8B/" title="盒模型">盒模型</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E2%80%94%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F/" title="分类于 信息安全—网络渗透">信息安全—网络渗透</a>
+</div>
+
+    <span><a href="/2022/01/11/%E4%BF%AE%E6%94%B9/2022-01-11-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络">计算机网络</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E2%80%94%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F/" title="分类于 信息安全—网络渗透">信息安全—网络渗透</a>
+</div>
+
+    <span><a href="/2022/01/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="计算机的基本概念">计算机的基本概念</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/01/19/%E7%AC%AC%E4%B8%89%E5%A4%A9%EF%BC%9AHTTP%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E2%80%94%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F/" title="分类于 信息安全—网络渗透">信息安全—网络渗透</a>
+</div>
+
+    <span><a href="/2022/01/13/web%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA/" title="web站点搭建">web站点搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E2%80%94%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F/" title="分类于 信息安全—网络渗透">信息安全—网络渗透</a>
+</div>
+
+    <span><a href="/2022/01/15/MySQL%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%8Asql%E6%B3%A8%E5%85%A5/" title="MySQL基本语法及sql注入">MySQL基本语法及sql注入</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/01/18/%E4%BF%AE%E6%94%B9/%E8%99%9A%E6%8B%9F%E7%9B%AE%E5%BD%95%EF%BC%9A%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E5%AD%90%E7%BD%91%E7%AB%99/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/2022/01/13/%E6%96%B0%E5%BB%BA%20%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/" title="CSS圆角、阴影、轮廓">CSS圆角、阴影、轮廓</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe @ Yume Shoka</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/01/13/新建 文本文档/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

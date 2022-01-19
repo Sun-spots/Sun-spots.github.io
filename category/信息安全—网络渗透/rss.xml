@@ -868,9 +868,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://sun-spots.github.io/2022/01/13/%E4%BF%AE%E6%94%B9/web%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA/</guid>
+            <guid isPermalink="true">https://sun-spots.github.io/2022/01/13/web%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA/</guid>
             <title>web站点搭建</title>
-            <link>https://sun-spots.github.io/2022/01/13/%E4%BF%AE%E6%94%B9/web%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA/</link>
+            <link>https://sun-spots.github.io/2022/01/13/web%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA/</link>
             <pubDate>Thu, 13 Jan 2022 23:05:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;web站点搭建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#web站点搭建&#34;&gt;#&lt;/a&gt; web 站点搭建&lt;/h1&gt;
 &lt;h3 id=&#34;一基础知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一基础知识&#34;&gt;#&lt;/a&gt; 一：基础知识&lt;/h3&gt;
@@ -907,7 +907,7 @@
 PHP（不适合大型）&amp;gt;NET（比较适合中、大型）&lt;br&gt;
 JSP&amp;gt;PHP &amp;gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL0FTUC5ORVQ=&#34;&gt;ASP.NET&lt;/span&gt;，比如安全高、安全中、安全低。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2. 域名&lt;/strong&gt;：简称域名、网域，是由一串用点分隔的名字组成的 Internet 上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。PS: 域名会被解析到一个唯一的公网 IP 地址上，当然通过 IP 也是可以去对网站进行访问。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2942226/1623390545612-7c2ca0fe-6815-4c3c-b47f-d296827dc125.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2022/01/8e4939b5eeb1b956.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;3. 空间&lt;/strong&gt;：&lt;/p&gt;
 &lt;p&gt;常见网站空间：虚拟主机（虚拟空间），独立服务器，云主机，VPS。&lt;/p&gt;
 &lt;p&gt;虚拟主机：是在网络服务器上划分出一定的磁盘空间供用户放置站点、应用组件等；提供必要的站点功能、数据存放和传输功能。所谓虚拟主机，也叫 “网站空间”，就是把一台运行在互联网上的服务器划分成多个 “虚拟” 的服务器。每一个虚拟主机都具有独立的域名和完整的 Internet 服务器（支持 WWW、FTP、E-mail 等）功能。&lt;/p&gt;
@@ -954,46 +954,47 @@ Linux + Apache + Mysql + JSP&lt;br&gt;
 Linux + Nginx + Oracle + JSP&lt;br&gt;
 Linux + Tomcat、Jboss、WebLogic + MySQL/Oracle + Jsp&lt;/p&gt;
 &lt;h3 id=&#34;二web服务器搭建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二web服务器搭建&#34;&gt;#&lt;/a&gt; 二：web 服务器搭建&lt;/h3&gt;
-&lt;p&gt;window serivce2016：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;window serivce2016：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;在服务器管理器界面点击 “添加角色与功能”&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Criyun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220114223535287.png&#34; alt=&#34;image-20220114223535287&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2022/01/3abb86dee48ec519.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;安装类型与服务器选择均默认，服务器角色选择 -----web 服务器&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Criyun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220114223741914.png&#34; alt=&#34;image-20220114223741914&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2022/01/a4d3c419c5d0b473.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;功能选择 -----IIS 可承载 web 核心&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Criyun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220114223915724.png&#34; alt=&#34;image-20220114223915724&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2022/01/fc3a69addced39ce.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;在此页面下找到以下选项选中即可&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Criyun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220114224044961.png&#34; alt=&#34;image-20220114224044961&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2022/01/00c83445b741a176.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;打开管理工具，选择 internet information service&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Criyun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220114224406509.png&#34; alt=&#34;image-20220114224406509&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2022/01/2573d508c78b1744.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;选择网站右键添加网站&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Criyun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220114224518459.png&#34; alt=&#34;image-20220114224518459&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2022/01/0833c62de01a43a4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;填写网络名称、物理路径，将应用程序池改为图中值并选择 ip&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Criyun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220114224858216.png&#34; alt=&#34;image-20220114224858216&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2022/01/100614fc3279f959.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;右键点击创建的网站，重新启动即可&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Criyun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220114225040107.png&#34; alt=&#34;image-20220114225040107&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2022/01/5f0b7b99f1c6eae3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;3常见的错误&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3常见的错误&#34;&gt;#&lt;/a&gt; 3 常见的错误&lt;/h3&gt;
 &lt;p&gt;3.1 若浏览器中出现文件夹中所有的文件，而没有出现初始页面，则此时应该在默认文档中加入网站初始页面的文件&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Criyun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220114225827199.png&#34; alt=&#34;image-20220114225827199&#34;&gt;&lt;img data-src=&#34;C:%5CUsers%5Criyun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220114225854186.png&#34; alt=&#34;image-20220114225854186&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2022/01/b3dd4412dd0ecec6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/7rjx91&#34;&gt;&lt;img data-src=&#34;https://s4.ax1x.com/2022/01/19/7rjx91.png&#34; alt=&#34;7rjx91.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;3.2 若浏览器中出现 403 错误，此时文件目录的访问权限出现问题，修改目录浏览，启用即可&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Criyun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220114230059829.png&#34; alt=&#34;image-20220114230059829&#34;&gt;&lt;img data-src=&#34;C:%5CUsers%5Criyun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220114230207160.png&#34; alt=&#34;image-20220114230207160&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/7rviHe&#34;&gt;&lt;img data-src=&#34;https://s4.ax1x.com/2022/01/19/7rviHe.png&#34; alt=&#34;7rviHe.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;3.3 若浏览器中出现数据库文件出错相关的问题。可以尝试将应用程序池中的 Class.Net 中的高级设置中的启用 32 位应用程序设置为 true&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Criyun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220114230341805.png&#34; alt=&#34;image-20220114230341805&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/7rvQHg&#34;&gt;&lt;img data-src=&#34;https://s4.ax1x.com/2022/01/19/7rvQHg.png&#34; alt=&#34;7rvQHg.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
  ]]></description>
@@ -1357,9 +1358,9 @@ Linux + Tomcat、Jboss、WebLogic + MySQL/Oracle + Jsp&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://sun-spots.github.io/2022/01/10/%E4%BF%AE%E6%94%B9/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+            <guid isPermalink="true">https://sun-spots.github.io/2022/01/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
             <title>计算机的基本概念</title>
-            <link>https://sun-spots.github.io/2022/01/10/%E4%BF%AE%E6%94%B9/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+            <link>https://sun-spots.github.io/2022/01/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
             <pubDate>Mon, 10 Jan 2022 20:05:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;计算机组成&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#计算机组成&#34;&gt;#&lt;/a&gt; 计算机组成&lt;/h1&gt;
 &lt;h2 id=&#34;课堂导学&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#课堂导学&#34;&gt;#&lt;/a&gt; 课堂导学：&lt;/h2&gt;
