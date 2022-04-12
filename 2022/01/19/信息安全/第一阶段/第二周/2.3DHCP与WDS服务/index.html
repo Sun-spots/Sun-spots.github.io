@@ -1,0 +1,706 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Hexo" href="https://sun-spots.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Hexo" href="https://sun-spots.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Hexo" href="https://sun-spots.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://sun-spots.github.io/2022/01/19/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%BA%8C%E5%91%A8/2.3DHCP%E4%B8%8EWDS%E6%9C%8D%E5%8A%A1/">
+
+
+
+  <title>
+ |
+Yume Shoka = Hexo</title>
+<meta name="generator" content="Hexo 6.0.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-01-19 18:06:07">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-01-19T18:06:07+08:00">2022-01-19</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://sun-spots.github.io/2022/01/19/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%BA%8C%E5%91%A8/2.3DHCP%E4%B8%8EWDS%E6%9C%8D%E5%8A%A1/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="John Doe">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p><strong>第三天：DHCP 与 WDS 服务</strong></p>
+<h1 id="一dhcp服务"><a class="markdownIt-Anchor" href="#一dhcp服务">#</a> 一：DHCP 服务</h1>
+<p><img data-src="C:/Users/riyun/AppData/Roaming/Typora/typora-user-images/image-20220119182615780.png" alt="image-20220119182615780"></p>
+<p>动态主机设置协定（Dynamic Host Configuration Protocol, DHCP）DHCP 是一个局域网的网络协议，使用 UDP 协议工作，其前身是 BOOTP 协议。当前的 DHCP 定义可以在 RFC 2131 中找到，而基于 IPv6 的建议标准（DHCPv6）可以在 RFC 3315 中找到。主要有两个用途：</p>
+<ul>
+<li>给内部网络或网络服务供应商自动分配 IP 地址给用户    #自动给当前网络分配 IP 地址信息</li>
+<li>给内部网络管理员作为对所有电脑作中央管理的手段   #更有效的管理 IP 地址资源</li>
+</ul>
+<p>&gt;&gt;&gt; 工作原理 &lt;&lt;&lt;</p>
+<p>动态主机设置协定（DHCP）是一种使网络管理员能够集中管理和自动分配 IP 网络地址的通信协议。在 IP 网络中，每个连接 Internet 的设备都需要分配唯一的 IP 地址。DHCP 使网络管理员能从中心结点监控和分配 IP 地址。当某台计算机移到网络中的其它位置时，能自动收到新的 IP 地址。</p>
+<p>DHCP 使用了租约的概念，或称为计算机 IP 地址的有效期。租用时间是不定的，主要取决于用户在某地联接 Internet 需要多久，这对于教育行业和其它用户频繁改变的环境是很实用的。通过较短的租期，DHCP 能够在一个计算机比可用 IP 地址多的环境中动态地重新配置网络。</p>
+<h3 id="11dhcp服务搭建"><a class="markdownIt-Anchor" href="#11dhcp服务搭建">#</a> 1.1：DHCP 服务搭建</h3>
+<p>步骤一：在 Windows server 2012R2 中设置好静态 IP 地址并将网卡链接模式设置为仅主机模式 (不开启 DHCP 服务)…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626179278819-41f3675e-e721-4548-a37c-3d7e49ffa0cd.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626180280643-161d90a1-b487-4ef9-a74d-df4537e5ea16.png" alt="img"></p>
+<p>步骤二：打开服务器管理器开始安装服务–&gt; 添加角色和功能–&gt; 并到选择服务器角色选择 DHCP 服务并进行安装</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626179496360-891da956-33fa-41a4-865d-68ba7d27fb6d.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626179655842-e08aec28-baaf-441d-883e-1463a8ecfe2c.png" alt="img"></p>
+<p>步骤二：在服务器管理器面板中–&gt; 工具–&gt;DHCP–&gt; 打开 DHCP 控制界面进行配置…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626179739856-39e8dcf5-930b-4f22-9fff-5e60c370e9d1.png" alt="img"></p>
+<h3 id="12dhcp服务应用"><a class="markdownIt-Anchor" href="#12dhcp服务应用">#</a> 1.2：DHCP 服务应用</h3>
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>操作系统</th>
+<th>IP 获取地址方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DHCP 服务器</td>
+<td>Windows server 2012R2</td>
+<td>192.168.0.40</td>
+</tr>
+<tr>
+<td>客户端验证</td>
+<td>Windows 7</td>
+<td>动态获取</td>
+</tr>
+</tbody>
+</table>
+<p>步骤一：打开 DHCP 控制台界面，在当前服务器下方的 IPV4 下右键选择新建作用域填写相对应的信息…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626179867263-0908032c-ed96-4ad4-aaac-07255bf38c34.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626179940676-773239e2-d59c-47a7-b682-bfbf600667d3.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626179979281-6e8303a1-70b1-41d9-b770-6de7300159d2.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626180060577-8c9afff4-4715-4d96-9be7-3b30f1a1610c.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626180074023-13175fc2-2c76-4c4f-b658-3abd1a7cfa31.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626180083149-ae195ca4-a94c-4636-a8d8-169420f555a8.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626180102296-f71a2d23-a223-40b4-b40d-9eadfce532f2.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626180115888-3a7c3b1e-9672-4f1b-8e84-279caf190652.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626180130359-fa6c7cef-a4db-4379-bbaf-b6f04648eb15.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626180141597-d2eae850-9672-4a37-9597-28dfc2e15e0b.png" alt="img"></p>
+<p>步骤二：打开 windows7 客户端操作以下 CMD 命令进行 IP 地址获取…</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /release  //释放DHCP获取的IP地址 </span><br><span class="line">ipconfig /renew    //重新获取IP地址</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626180378605-546baefd-f9b3-4b0f-a966-ea9e627401d4.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626180396284-3b3971d7-e52d-4722-be8a-4c44cc233855.png" alt="img"></p>
+<h3 id="13配置故障转移"><a class="markdownIt-Anchor" href="#13配置故障转移">#</a> 1.3：配置故障转移</h3>
+<p>步骤一：准备另外一台 Windows server 2012R2 服务器并按照 1.1 的搭建好 DHCP 服务…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626182440360-26a19bcb-928d-401e-a510-f08a32f4d31f.png" alt="img"></p>
+<p>步骤二：在主服务器上打开 DHCP 的控制端并在作用域右键–&gt; 配置故障转移集群并填写相关信息…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626180880056-6685173e-0039-4189-83f1-237a9d2b74bf.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626180970304-5cc10dfb-9a98-44c2-a4be-1197ab46ce8d.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626182532870-44cf021b-3e57-49bb-9dea-7166038195f7.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626182548886-f0c6f9f2-c8a5-4878-92f3-16efbcb2888c.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626182602087-9d507089-5e09-43c3-aa00-513576dee2ee.png" alt="img"></p>
+<p>步骤三：来到备用的服务器 DHCP 控制台中查看相关信息发现已经同步成功… 并且 DOWN 主服务器备用服务器还能够继续提供 DHCP 服务…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626182735398-0c712a8d-b117-480f-9bf7-dfc5113f7f87.png" alt="img"></p>
+<h3 id="14指定主机保留地址"><a class="markdownIt-Anchor" href="#14指定主机保留地址">#</a> 1.4：指定主机保留地址</h3>
+<p>DHCP 服务器设置 IP 保留地址。 在网络中，有些特殊计算机需要每次都获得相同的 IP 地址，这需要利用 DHCP 服务器的 “保留” 功能，将特定的 IP 地址与客户端计算机进行绑定，使该 DHCP 客户端每次向 DHCP 服务器请求时，都会获得同一个 IP 地址。</p>
+<p>步骤一：在 Win7 中使用 ipconfig /all 命令查看 MAC 地址…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626184041868-7e8d80bd-fb94-4efd-8215-ee6dce6a9073.png" alt="img"></p>
+<p>步骤二：在 DHCP 控制界面作用域下–&gt; 保留右键新建保留–&gt; 将要 MAC 地址要绑定的信息写入并添加…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626184200855-2b4869c3-ec2d-4464-bc41-a645ca295819.png" alt="img"></p>
+<p>步骤三：Win7 客户机使用一下命令重新获取 IP 地址发现还是 192.168.0.150</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /release  //释放DHCP获取的IP地址 </span><br><span class="line">ipconfig /renew    //重新获取IP地址</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626184324793-5ea16baa-c6c6-44d4-b91b-d29268ea65d1.png" alt="img"></p>
+<h1 id="二wds服务"><a class="markdownIt-Anchor" href="#二wds服务">#</a> 二：WDS 服务</h1>
+<p>预启动执行环境（Preboot eXecution Environment，PXE）也被称为预执行环境，提供了一种使用网络接口（Network Interface）启动计算机的机制。这种机制让计算机的启动可以不依赖本地数据存储设备（如硬盘）或本地已安装的操作系统。</p>
+<p>Windows 部署服务 Windows Deployment Services 缩写，中文意思是 Windows 部署服务。WDS 适用于大中型企业部署大批量新计算机和重装客户端，通过 WDS 来管理多版本映像以及无人参与安装脚本，并提供人工参与安装和无人参与安装的选项。</p>
+<p>&gt;&gt;&gt;WDS 的作用 &lt;&lt;&lt;</p>
+<p>场景一：</p>
+<p>你现在有 1 台电脑需要装系统，那么很简单，你拿上一个 U 盘安装盘插在这台电脑上，然后从 U 盘启动，之后就可以手动安装系统了；但如果你现在有 100 台电脑，如果你在拿着一个 U 盘安装盘一台台安装，那效率肯定是太低了，这个时候 PXE 就派上用场了。</p>
+<p>场景二：</p>
+<p>某公司对信息安全要求比较高，需要使用无盘系统（系统不在本地电脑上，而在公司特定的服务器上），这个时候也需要使用 PXE。</p>
+<p>场景三：</p>
+<p>你想要一台远程的电脑运行你手上特定的系统，这个时候你就可以在本地布置一个你手上的系统，然后通过 PXE 启动你本地的系统（这个可能需要额外的支持，比如 BMC，因为要远程）。</p>
+<p>&gt;&gt;&gt;WDS 启动原理 &lt;&lt;&lt;</p>
+<p>当计算机引导时，<span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9CSU9T">BIOS</span> 把 PXE Client 调入内存中执行，然后由 PXE <span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9DbGllbnQ=">Client</span> 将放置在远端的文件通过网络下载到本地运行。</p>
+<p>&gt;&gt;&gt;PXE 装机优点 &lt;&lt;&lt;</p>
+<table>
+<thead>
+<tr>
+<th>规模化</th>
+<th>同时配置多台服务器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自动化</td>
+<td>安装系统，配置各种服务</td>
+</tr>
+<tr>
+<td>远程实现</td>
+<td>不需要光盘、U 盘等安装介质</td>
+</tr>
+</tbody>
+</table>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/jpeg/2699750/1626224524855-96b852aa-a781-4c2e-be85-44250a923273.jpeg" alt="img"></p>
+<p>&gt;&gt;&gt; 部署 WDS 需要环境 &lt;&lt;&lt;</p>
+<p>AD 域服务器的安装：活动目录服务，主要用于用户的身份验证</p>
+<p>DNS 服务器安装：域名解析服务，主要用于查找域控制器和名称的解析服务</p>
+<p>DHCP 服务器的安装：用于向需要安装操作系统的客户机分配 IP 地址</p>
+<p>WDS 服务安装 注：加载部署的系统镜像</p>
+<p>&gt;&gt;&gt;WDS 部署系统自动化安装流程 &lt;&lt;&lt;</p>
+<ol>
+<li>
+<p>拥有 PXE 兼容网卡的计算机启动，并进入网络引导模式</p>
+</li>
+<li>
+<p>获取 DHCP 服务器分配的 IP 地址</p>
+</li>
+<li>
+<p>查找 WDS 服务器</p>
+</li>
+<li>
+<p>WDS 检查客户端是否拥有授权，检查多播传输设置</p>
+</li>
+<li>
+<p>开始部署</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>操作系统</th>
+<th>安装服务</th>
+<th>作用定位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows server 2012 R2</td>
+<td>AD/DNS/DHCP/WDS</td>
+<td>PXE 服务端</td>
+</tr>
+<tr>
+<td>Windows 10</td>
+<td>裸机</td>
+<td>PXE 客户端</td>
+</tr>
+<tr>
+<td>Windows 7</td>
+<td>无</td>
+<td>DHCP 测试</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21wds服务搭建"><a class="markdownIt-Anchor" href="#21wds服务搭建">#</a> 2.1：WDS 服务搭建</h3>
+<p>步骤一：准备一台干净的 Windows Server 2012R2，设置好在<strong>计算机名</strong>并设置<strong>网卡为仅主机模式</strong>和<strong>静态的 IP 地址</strong></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626227560204-4ff0293f-c0c3-4ec7-94aa-39b72b5f1842.png" alt="img"></p>
+<p>步骤二：电脑重启之后打开服务器管理器点击<strong>添加角色和功能</strong>，一路回车来到选择服务器角色–》勾选【Active Directory 域服务，DHCP 服务器，DNS 服务器，Windows 部署服务】勾选后一路回车默认并到达安装页面进行安装…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626227928955-935fec6c-8d48-45cf-bbe3-f218522edf5e.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626228019225-48814606-018a-43ae-9b94-b8cffffa8f3c.png" alt="img"></p>
+<h3 id="22wds部署win10"><a class="markdownIt-Anchor" href="#22wds部署win10">#</a> 2.2：WDS 部署 Win10</h3>
+<p>步骤一：将指定的服务搭建完成后，在小旗子下方选择【将此服务器提升为域控制器】并以此填写以下信息…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626228231660-2d468936-6634-4864-948b-29a8eccbb53e.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626228305838-ff7f77dd-d42e-45db-96a4-44d67cabb1f5.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626228358966-a47f449b-bec1-4c04-a4ac-30ec13059a62.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626228391136-4d73b02f-ddf3-492b-bef8-7f6c8cf69575.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626228475118-ac5d54e9-b99b-48e8-81c5-41b95e79e4fd.png" alt="img"></p>
+<p>步骤二：重启之后打开服务器管理器在其小旗子下面点击【完成 DHCP 配置】，并填写一下相关信息…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626228760652-442746e2-0c2e-4c10-a23c-1914388631e3.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626228772616-84b49e39-2071-462c-8865-ed8a0c2719da.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626228784016-3d802ea3-157a-43e4-b6b5-aaa2f1406e99.png" alt="img"></p>
+<p>步骤三：对 DHCP 服务器进行配置… 创建好作用域之后拿 Win7 客户机进行 DHCP 获取动态 IP 地址进行测试…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626228917182-2f92be73-6abc-454d-b82e-4a6b4ca9450b.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626228934709-6e52c384-465e-4565-93a6-a0d851959c92.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626228951271-77402d9f-1440-49a5-afa7-bb7b4a4d328a.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626228997110-3004f64e-2df1-48d6-9d2e-21ecbef8969f.png" alt="img"></p>
+<p>开启 Windows7 主机后可以看到在服务器的 DHCP 控制台里的地址租用选项已经获取到动态 IP 地址…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626229226160-b425ad1b-5a37-4509-b3b5-a493ea3212bb.png" alt="img"></p>
+<p>步骤四：将 Windows10 镜像文件通过光驱挂载到服务器上，并打开【WDS 部署服务管理控制台】对服务器进行配置…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626229492925-f39efd60-5f11-4e8d-9fdc-9096151a26f9.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626229451824-c23f5b43-5107-486c-8d81-7df28cc79cf8.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626229555958-ff8659cf-ac07-4ff2-a58e-27c5757ccaf1.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626229580080-28bc41aa-6ac2-41dc-af63-9ec3406fe0b1.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626229594409-20b22c4c-9e86-4957-bbba-2b3531c77ec9.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626229605981-2fbed673-f407-4609-aece-a5193d7030e5.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626229617640-129a959f-4976-49d9-913c-9ba93be64c29.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626229628071-a5966554-7a10-4ba5-9a1e-ffb986aca195.png" alt="img"></p>
+<p>步骤五：添加安装镜像与启动镜像</p>
+<ol>
+<li>安装镜像，iso 的 sources 中的 install.wim 即可</li>
+<li>启动映像，右击添加启动映像，打开选择框会自动定位在安装镜像的文件夹内，选择另一个 wim 镜像，即 boot.wim，这个就是启动映像。名字都是自定义的。</li>
+</ol>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626229708376-6dd52677-a867-4f8c-a475-8b5a2b3c9578.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626229754199-9c7d79e6-228e-47ee-aeb7-c8d4865666f4.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626229764618-50cbef46-e4b0-4d5c-800b-57719179883d.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626229776562-19fd28f9-37b8-42e5-a46a-dce5270d4e4c.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230002139-62b5c8e5-be2a-4240-8b19-aa44d0206172.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230012983-a1abe622-c747-41ac-b510-67741800a63c.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230032897-1a103944-f65c-4c81-897c-c8aa3b6f645f.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230045347-485edd25-15ce-45bc-b3f7-d2bded3f5798.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230061961-1ad94f4a-c15e-43e3-afc2-407edc55dd4c.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230073954-82b3e80c-2921-4313-9b0b-2ebec0c016e6.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230121262-6e0ac41e-db62-48af-95ce-139884670273.png" alt="img"></p>
+<p>步骤六：新建个 windows 10 的虚拟机，并设置网络链接模式为仅主机模式… 开机安装操作系统…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230801249-8af3af47-08a6-4852-9ef2-6e309ad7f838.png" alt="img"></p>
+<p>在此选择网络引导启动安装，可以的看到在 PXE 服务上获取的信息…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230842633-9872b6df-bbd5-4fcb-acad-63d1b3af0d96.png" alt="img"></p>
+<p>正在加载引导文件…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230869472-1be67c39-0d7c-4513-b981-736c44bf9fe5.png" alt="img"></p>
+<p>进入安装…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230901867-9de335d3-fa0f-4f31-88c3-99f8658640b4.png" alt="img"></p>
+<p>将域管理员用户密码输入进行身份认证…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230928785-88265b97-9711-4cd9-821b-1b19ddc75d77.png" alt="img"></p>
+<p>选择安装操作系统版本</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230939824-bc5954ce-6ab8-4321-bda6-a55a88671096.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230955748-e87ad540-4162-429b-81c0-0e6ad8bd8720.png" alt="img"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230970182-2bb14cd9-9ebe-40d6-a5f2-f95037e82889.png" alt="img"></p>
+<p>查看服务端的 DHCP 控制台获取 IP 地址状态…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626230996161-5041d9d8-949f-4fea-a86b-737026114e92.png" alt="img"></p>
+<p>步骤七：安装完成进行测试…</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/2699750/1626231733607-81b38f56-1ea1-4679-96db-f47d9210b426.png" alt="img"></p>
+<p>推介课程：法老:<br>
+ 明教教主 乾隆堂   --》网络工程师</p>
+<p>法老:<br>
+ 安全牛  --》KALI 渗透测试</p>
+<p>法老:<br>
+ 菜鸟腾飞安全网 —》编程 渗透</p>
+<p>法老:<br>
+ 黑马程序员 —》Mysql</p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-01-19 18:26:21" itemprop="dateModified" datetime="2022-01-19T18:26:21+08:00">2022-01-19</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="John Doe 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="John Doe 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="John Doe 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>John Doe <i class="ic i-at"><em>@</em></i>Hexo
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://sun-spots.github.io/2022/01/19/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%BA%8C%E5%91%A8/2.3DHCP%E4%B8%8EWDS%E6%9C%8D%E5%8A%A1/" title="">https://sun-spots.github.io/2022/01/19/信息安全/第一阶段/第二周/2.3DHCP与WDS服务/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/01/19/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%80%E5%91%A8/1.3HTTP%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxxcb6rj20zk0m8b29.jpg" title="未命名">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>未命名</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2022/01/19/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%80%E5%91%A8/1.2%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciub8ja1j20zk0m81ky.jpg" title="未命名">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>未命名</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80dhcp%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.</span> <span class="toc-text"> 一：DHCP 服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11dhcp%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA"><span class="toc-number">1.0.1.</span> <span class="toc-text"> 1.1：DHCP 服务搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12dhcp%E6%9C%8D%E5%8A%A1%E5%BA%94%E7%94%A8"><span class="toc-number">1.0.2.</span> <span class="toc-text"> 1.2：DHCP 服务应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13%E9%85%8D%E7%BD%AE%E6%95%85%E9%9A%9C%E8%BD%AC%E7%A7%BB"><span class="toc-number">1.0.3.</span> <span class="toc-text"> 1.3：配置故障转移</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14%E6%8C%87%E5%AE%9A%E4%B8%BB%E6%9C%BA%E4%BF%9D%E7%95%99%E5%9C%B0%E5%9D%80"><span class="toc-number">1.0.4.</span> <span class="toc-text"> 1.4：指定主机保留地址</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8Cwds%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.</span> <span class="toc-text"> 二：WDS 服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#21wds%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA"><span class="toc-number">2.0.1.</span> <span class="toc-text"> 2.1：WDS 服务搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22wds%E9%83%A8%E7%BD%B2win10"><span class="toc-number">2.0.2.</span> <span class="toc-text"> 2.2：WDS 部署 Win10</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="John Doe"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">John Doe</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">37</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">3</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2022/01/19/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%80%E5%91%A8/1.3HTTP%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2022/01/19/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%80%E5%91%A8/1.2%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/02/23/%E4%BF%AE%E6%94%B9/2.2.2%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E2%80%94%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F/" title="分类于 信息安全—网络渗透">信息安全—网络渗透</a>
+</div>
+
+    <span><a href="/2022/01/10/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%80%E5%91%A8/1.1%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="计算机的基本概念">计算机的基本概念</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/03/04/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%BA%8C%E5%91%A8/CRSF%E6%94%BB%E5%87%BB/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E2%80%94%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F/" title="分类于 信息安全—网络渗透">信息安全—网络渗透</a>
+</div>
+
+    <span><a href="/2022/01/11/%E4%BF%AE%E6%94%B9/2022-01-11-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络">计算机网络</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/2022/01/13/%E4%BF%AE%E6%94%B9/CSS%E8%AF%AD%E6%B3%95%E4%B8%8E%E9%80%89%E6%8B%A9%E5%99%A8/" title="CSS语法与选择器">CSS语法与选择器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/03/04/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%BA%8C%E5%91%A8/XSS%E6%94%BB%E5%87%BB/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/02/23/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/kali%E4%B8%AD%E6%97%A0python2pip/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/01/18/%E4%BF%AE%E6%94%B9/%E8%99%9A%E6%8B%9F%E7%9B%AE%E5%BD%95%EF%BC%9A%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E5%AD%90%E7%BD%91%E7%AB%99/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/03/08/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%89%E5%91%A8/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E4%B8%8E%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/01/21/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%BA%8C%E5%91%A8/2.5%E5%9F%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86/" title="未命名">未命名</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe @ Yume Shoka</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/01/19/信息安全/第一阶段/第二周/2.3DHCP与WDS服务/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

