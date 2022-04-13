@@ -5,8 +5,39 @@
         <link>https://sun-spots.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Sun, 10 Apr 2022 20:05:00 +0800</pubDate>
-        <lastBuildDate>Sun, 10 Apr 2022 20:05:00 +0800</lastBuildDate>
+        <pubDate>Wed, 13 Apr 2022 13:50:57 +0800</pubDate>
+        <lastBuildDate>Wed, 13 Apr 2022 13:50:57 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://sun-spots.github.io/2022/04/13/java%E5%BE%AE%E6%9C%8D%E5%8A%A1/%E6%B3%9B%E5%9E%8B/</guid>
+            <title>java泛型基础知识</title>
+            <link>https://sun-spots.github.io/2022/04/13/java%E5%BE%AE%E6%9C%8D%E5%8A%A1/%E6%B3%9B%E5%9E%8B/</link>
+            <pubDate>Wed, 13 Apr 2022 13:50:57 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;泛型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#泛型&#34;&gt;#&lt;/a&gt; 泛型&lt;/h3&gt;
+&lt;h5 id=&#34;概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#概念&#34;&gt;#&lt;/a&gt; 概念&lt;/h5&gt;
+&lt;p&gt;Java 泛型（generics）是 JDK 5 中引入的一个新特性，泛型提供了编译时类型安全检测机制，可以解决数据类型的安全问题 (不统一)，主要原理是在类声明时候通过一个标识符标识类中某个属性或方法的返回值，这样在类声明或实例化时再指定数据类型。该机制允许程序员在编译时检测到非法的类型。泛型的本质是参数化类型，也就是说所操作的数据类型被指定为一个参数。这种参数类型可以用在类、接口和方法中，分别被称为&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT0lRTYlQjMlOUIlRTUlOUUlOEIlRTclQjElQkImYW1wO3NwbT0xMDAxLjIxMDEuMzAwMS43MDIw&#34;&gt;泛型类&lt;/span&gt;、泛型接口、泛型方法。&lt;/p&gt;
+&lt;p&gt;本质：类声明或实例化时再指定具体数据类型。泛型是在面向对象的基础上发展起来的，换句话说，泛型是在引用传递的基础上发展起来的。&lt;/p&gt;
+&lt;h5 id=&#34;泛型类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#泛型类&#34;&gt;#&lt;/a&gt; 泛型类&lt;/h5&gt;
+&lt;p&gt;泛型类的声明和非泛型类的声明类似，除了在类名后面添加了类型参数声明部分。泛型类的类型参数声明部分也包含一个或多个类型参数，参数间用逗号隔开。一个泛型参数，也被称为一个类型变量，是用于指定一个泛型类型名称的标识符。因为他们接受一个或多个参数，这些类被称为参数化的类或参数化的类型。&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;GenericClass&lt;/span&gt;&amp;lt;&lt;span class=&#34;title&#34;&gt;T&lt;/span&gt;&amp;gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; T value;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;GenericClass&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;(T value)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;this&lt;/span&gt;.value = value;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; T &lt;span class=&#34;title&#34;&gt;getValue&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; value;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;setValue&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;(T value)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;this&lt;/span&gt;.value = value;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//TODO 1:泛型类&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;GenericClass&amp;lt;String&amp;gt; name = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; GenericClass&amp;lt;&amp;gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hellow&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println(name.getValue());&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;GenericClass&amp;lt;Integer&amp;gt; number = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; GenericClass&amp;lt;&amp;gt;(&lt;span class=&#34;number&#34;&gt;123&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println(number.getValue());&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;---------------------------------------------------------------&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;运行结果：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hellow&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;number&#34;&gt;123&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;---------------------------------------------------------------&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;注意事项：泛型类型必须是引用类型（非基本数据类型）&lt;/p&gt;
+&lt;p&gt;定义泛型类，在类名后添加一对尖括号，并在尖括号中填写类型参数，参数可以有多个，多个参数使用逗号分隔：&lt;/p&gt;
+&lt;p&gt;public class 类名 &amp;lt;泛型类型 1,…&amp;gt; {}&lt;/p&gt;
+&lt;p&gt;当然，这个后面的参数类型也是有规范的，不能像上面一样随意，通常类型参数我们都使用大写的单个字母表示：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;T：任意类型 type
+E：集合中元素的类型 element
+K：key-value形式的key
+V： key-value形式的value
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;泛型方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#泛型方法&#34;&gt;#&lt;/a&gt; 泛型方法&lt;/h5&gt;
+&lt;p&gt;泛型方法在调用时可以接收不同类型的参数。根据传递给泛型方法的参数类型，编译器适当地处理每一个方法调用。下面是定义泛型方法的规则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;所有泛型方法声明都有一个类型参数声明部分（由尖括号分隔），该类型参数声明部分在方法返回类型之前。&lt;/li&gt;
+&lt;li&gt;每一个类型参数声明部分包含一个或多个类型参数，参数间用逗号隔开。一个泛型参数，也被称为一个类型变量，是用于指定一个泛型类型名称的标识符。&lt;/li&gt;
+&lt;li&gt;类型参数能被用来声明返回值类型，并且能作为泛型方法得到的实际参数类型的占位符。&lt;/li&gt;
+&lt;li&gt;泛型方法体的声明和其他方法一样。注意类型参数只能代表引用型类型，不能是原始类型（像 &lt;strong&gt;int、double、char&lt;/strong&gt; 等）。&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://sun-spots.github.io/2022/04/10/java%E5%BE%AE%E6%9C%8D%E5%8A%A1/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid>
             <title>java异常基础知识</title>
@@ -44,7 +75,7 @@ final修饰的变量不能重新赋值。&lt;/p&gt;
         </item>
         <item>
             <guid isPermalink="true">https://sun-spots.github.io/2022/03/09/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/%E4%BB%A3%E7%90%86%E6%B1%A0%E6%8A%80%E6%9C%AF/</guid>
-            <title></title>
+            <title>代理池技术</title>
             <link>https://sun-spots.github.io/2022/03/09/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/%E4%BB%A3%E7%90%86%E6%B1%A0%E6%8A%80%E6%9C%AF/</link>
             <pubDate>Wed, 09 Mar 2022 09:03:12 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;代理池技术&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#代理池技术&#34;&gt;#&lt;/a&gt; 代理池技术&lt;/h1&gt;
@@ -208,7 +239,7 @@ final修饰的变量不能重新赋值。&lt;/p&gt;
         </item>
         <item>
             <guid isPermalink="true">https://sun-spots.github.io/2022/03/09/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E7%AB%AF%E5%8F%A3/</guid>
-            <title></title>
+            <title>黑客常用端口</title>
             <link>https://sun-spots.github.io/2022/03/09/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E7%AB%AF%E5%8F%A3/</link>
             <pubDate>Wed, 09 Mar 2022 09:01:08 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;黑客常用端口&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#黑客常用端口&#34;&gt;#&lt;/a&gt; 黑客常用端口&lt;/h1&gt;
@@ -7709,7 +7740,7 @@ oneforall 貌似实现了&lt;br&gt;
         </item>
         <item>
             <guid isPermalink="true">https://sun-spots.github.io/2022/02/23/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/kali%E4%B8%AD%E6%97%A0python2pip/</guid>
-            <title></title>
+            <title>Kali中Python2无pip</title>
             <link>https://sun-spots.github.io/2022/02/23/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/kali%E4%B8%AD%E6%97%A0python2pip/</link>
             <pubDate>Wed, 23 Feb 2022 09:33:54 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;kali中python2无pip&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#kali中python2无pip&#34;&gt;#&lt;/a&gt; Kali 中 Python2 无 PIP&lt;/h1&gt;
@@ -8180,50 +8211,6 @@ oneforall 貌似实现了&lt;br&gt;
 &lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;ul&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;class&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;menu&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;li&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;class&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;nav&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;href&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;HTML/CSS&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;li&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;class&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;nav&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;href&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;Browser Side&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;li&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;class&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;nav&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;href&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;Server Side&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;li&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;class&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;nav&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;href&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;Programming&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;li&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;class&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;nav&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;href&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;XML&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;li&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;class&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;nav&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;href&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;Web Building&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;li&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;class&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;nav&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;href&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;Reference&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;ul&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;效果&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://gitee.com/vectorx/ImageCloud/raw/master/html5/20210524215648.gif&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://sun-spots.github.io/2022/01/19/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/MSSQL%E5%AE%89%E8%A3%85/</guid>
-            <title></title>
-            <link>https://sun-spots.github.io/2022/01/19/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/MSSQL%E5%AE%89%E8%A3%85/</link>
-            <pubDate>Wed, 19 Jan 2022 18:31:55 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;mssql安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mssql安装&#34;&gt;#&lt;/a&gt; MSSQL 安装&lt;/h1&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;操作系统&lt;/th&gt;
-&lt;th&gt;数据库系统&lt;/th&gt;
-&lt;th&gt;系统配置&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Windows server 2012R2&lt;/td&gt;
-&lt;td&gt;SQL Server 2012R2&lt;/td&gt;
-&lt;td&gt;内存 4G / 硬盘 40G&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;数据库镜像下载地址：&lt;/p&gt;
-&lt;figure class=&#34;highlight erlang&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ed2k://|file|cn_sql_server_2012_enterprise_edition_with_sp1_x64_dvd_1234495.iso|&lt;span class=&#34;number&#34;&gt;4231520256&lt;/span&gt;|EB9F35CAC10578613A6E9D56090BAF06|/    &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;步骤一：将 sql server 镜像文件添加到虚拟机中，并在虚拟机中打开&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624969886291-fc52fd78-cf11-4f53-9128-e365d85733b0.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;步骤二：点击安装–&amp;gt; 权限 SQL Server 独立安装或向现有安装添加功能&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624969951852-28ac96a9-57b4-409a-bee6-ac44cf07bb2a.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;步骤三：输入产品密钥，破解版本即我告诉你下载自带激活密钥&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624970007589-a22581ca-09d9-4f38-9374-2bfeb33dd434.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;步骤四：一路回车检测完毕后，到达一下页面选择 SQL Server 功能安装–&amp;gt; 在功能处点击全选&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624970168419-03103d82-ccf3-41b5-af18-0f1da16998e8.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624970231406-fcce7d7e-7cbf-44cf-b45c-fa1c0711aab0.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;步骤五：在检测完毕后来到实例配置页面选择默认实例即可，进入检测&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624970298848-12963874-812a-468d-8e83-c890d5259163.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;步骤六：检测完毕后，配置身份认证模式选择混合模式并为 SA 账户配置密码&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624970518373-241b4878-6183-48ef-b497-d0b4e55ed0bc.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;步骤七：一路回车，如果遇到问题直接添加当前用户，来到此页面点击安装就完事！&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624970598907-5e9ace51-b82d-47cf-8dcf-e3362214730d.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;步骤八：进行验证操作，使用 SA 身份进行登录&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624972006387-a4b9169d-0c0b-40ba-ad61-79a419c106f4.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624971934585-1befded6-e139-4a32-b12d-0a765a0ed377.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -12564,6 +12551,50 @@ Linux + Tomcat、Jboss、WebLogic + MySQL/Oracle + Jsp&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2022/png/2699750/1641981354751-b21119ce-a158-4f62-996c-2c3f6c709cfd.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
 &lt;p&gt;步骤三：在受害者主机进行 ping 命令测试，查看 DNS 是否欺骗成功…&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2022/png/2699750/1641980701483-03d45356-1ca6-4ad6-bece-71d5070c3c76.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://sun-spots.github.io/2022/01/10/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/MSSQL%E5%AE%89%E8%A3%85/</guid>
+            <title>sql安装</title>
+            <link>https://sun-spots.github.io/2022/01/10/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/MSSQL%E5%AE%89%E8%A3%85/</link>
+            <pubDate>Mon, 10 Jan 2022 20:05:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;mssql安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mssql安装&#34;&gt;#&lt;/a&gt; MSSQL 安装&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;操作系统&lt;/th&gt;
+&lt;th&gt;数据库系统&lt;/th&gt;
+&lt;th&gt;系统配置&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows server 2012R2&lt;/td&gt;
+&lt;td&gt;SQL Server 2012R2&lt;/td&gt;
+&lt;td&gt;内存 4G / 硬盘 40G&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;数据库镜像下载地址：&lt;/p&gt;
+&lt;figure class=&#34;highlight erlang&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ed2k://|file|cn_sql_server_2012_enterprise_edition_with_sp1_x64_dvd_1234495.iso|&lt;span class=&#34;number&#34;&gt;4231520256&lt;/span&gt;|EB9F35CAC10578613A6E9D56090BAF06|/    &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;步骤一：将 sql server 镜像文件添加到虚拟机中，并在虚拟机中打开&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624969886291-fc52fd78-cf11-4f53-9128-e365d85733b0.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;步骤二：点击安装–&amp;gt; 权限 SQL Server 独立安装或向现有安装添加功能&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624969951852-28ac96a9-57b4-409a-bee6-ac44cf07bb2a.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;步骤三：输入产品密钥，破解版本即我告诉你下载自带激活密钥&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624970007589-a22581ca-09d9-4f38-9374-2bfeb33dd434.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;步骤四：一路回车检测完毕后，到达一下页面选择 SQL Server 功能安装–&amp;gt; 在功能处点击全选&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624970168419-03103d82-ccf3-41b5-af18-0f1da16998e8.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624970231406-fcce7d7e-7cbf-44cf-b45c-fa1c0711aab0.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;步骤五：在检测完毕后来到实例配置页面选择默认实例即可，进入检测&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624970298848-12963874-812a-468d-8e83-c890d5259163.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;步骤六：检测完毕后，配置身份认证模式选择混合模式并为 SA 账户配置密码&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624970518373-241b4878-6183-48ef-b497-d0b4e55ed0bc.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;步骤七：一路回车，如果遇到问题直接添加当前用户，来到此页面点击安装就完事！&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624970598907-5e9ace51-b82d-47cf-8dcf-e3362214730d.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;步骤八：进行验证操作，使用 SA 身份进行登录&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624972006387-a4b9169d-0c0b-40ba-ad61-79a419c106f4.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.nlark.com/yuque/0/2021/png/2699750/1624971934585-1befded6-e139-4a32-b12d-0a765a0ed377.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
